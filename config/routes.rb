@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_ios_rails_for :bars
   devise_ios_rails_for :users
   root 'users#new'
+  resources :bars
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
