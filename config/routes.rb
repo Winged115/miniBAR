@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_ios_rails_for :bars
+  devise_ios_rails_for :users
   root 'users#new'
 
   # Example of regular route:
