@@ -4,7 +4,7 @@ class CreateBars < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.string :merchant_account_id
-      t.boolean :discoverable
+      t.boolean :discoverable, {default: false}
       t.integer :user_id
 
       t.timestamps null: false
