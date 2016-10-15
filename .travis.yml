@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.1.5
+- 2.1.5
+deploy:
+  provider: heroku
+  api_key:
+    secure: iE/ganXRtj3bEKJQmZB16sr4l81OBfxPfvi+WohySbR9QvwNI9fQ9oDeTxYCiC97SLD2qXae03v2rc6Cptcd1Kx2xEzDRpEuLOy/pBf1EJkeQOeMQXNH0HF8TqeWUS61DontU6OOGIxzd57qZUZAKF+NI3/ECuPAVYZSarKW5Il7p3w07AFnIQP5Rtr+fPE3uGGJZVMum6TFGVyBwnqucVBUC39BlLpTUgk//RKLRDIgH3bJtDnCRk2Ght2ozw9UyvsqDOBoOiAwNV8rnSJtzLGP7a2bWYSefOBWoV4B0PwOzbzKSLeAOxuDMRe1ZLr+0lNUPT5dlExZG62ociX6CK6zBW/2N2ojQV+Spd9brM2MhJLShV1yhmMIayKswNByZzNrjZLyBXMsdapmFZU/7Tk/k+uQimNrSYER7fCmvOOTaCvR4eDuSPXpoXInBlrJ9ONqJVFnjSsT6JxCYC9druzCU0qTay3oxkbg92fSngpBn3628sGrFIfn1hgcSWKczvjE0MpmGZb1ZwrXVY83rAYYkTNpG+3uP2AR+LwwyXOpL9BsJWSSbb7s63pzD9EJrq6TBQR9JbPdknrhe9/hbv/cs9GhwOiEV/zy3BllUuuJyj/oXuVmwWvXppw8Hj1MruYyL4n4HZcxZHNVzckOTHqrVobq1+axq7+yHrc4KnM=
+  app: miniBAR
+  on:
+    repo: Winged115/miniBAR
