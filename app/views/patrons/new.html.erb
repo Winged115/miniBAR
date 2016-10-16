@@ -1,0 +1,13 @@
+<h2> Register as a Patron </h2>
+
+<% if @errors %>
+  <%= render partial: "partials/errors", locals: { errors: @errors } %>
+<% end %>
+
+<%= form_for @patron do |f| %>
+<p><%= f.text_field :first_name, placeholder: "First" %></p>
+<p><%= f.text_field :last_name, placeholder: "Last" %></p>
+<p><%= f.email_field :email, placeholder: "Email" %></p>
+<p><%= f.password_field :password, placeholder: "Password" %></p>
+<%= f.submit "Get To Drinkin!" %>
+<% end %>
