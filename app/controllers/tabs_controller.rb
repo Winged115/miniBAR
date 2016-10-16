@@ -1,7 +1,24 @@
 class TabsController < ApplicationController
 
+
+  def show
+    @tab = Tab.find(params[:id])
+  end
+
   def new
     @tab = Tab.new
+  end
+
+  def update
+    @tab = Tab.find(params[:id])
+    if @tab
+      @tab.closed = true
+      @tab.total = params[:total]
+      redirect_to bars_path
+    else
+      @errors = ["Something went wrong"]
+      render :edit
+    end
   end
 
   def create
