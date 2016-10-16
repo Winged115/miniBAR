@@ -1,0 +1,16 @@
+<h2> Register as a Bar </h2>
+
+<% if @errors %>
+  <%= render partial: "partials/errors", locals: { errors: @errors } %>
+<% end %>
+
+<%= form_for @bar do |f| %>
+<p><%= f.text_field :name, placeholder: "Name" %> </p>
+<p><%= f.email_field :email, placeholder: "Email" %> </p>
+<p><%= f.text_field :address, placeholder: "Address" %> </p>
+<p><%= f.text_field :city, placeholder: "City" %> </p>
+<p><%= f.text_field :state, placeholder: "State" %> </p>
+<p><%= f.number_field :zipcode, placeholder: "Zip" %> </p>
+<p><%= f.password_field :password, placeholder: "Password" %> </p>
+<p><%= f.submit "Get To Makin' Drinks!" %></p>
+<% end %>

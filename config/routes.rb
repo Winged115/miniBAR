@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'patrons#new'
-
+  resources :sessions, only: [:new, :create, :destroy]
   resources :tabs, only: [:edit, :update]
   resources :tab_items, only: [:create, :destroy]
   resources :drinks, only: [:index]
