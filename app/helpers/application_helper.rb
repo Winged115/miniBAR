@@ -1,13 +1,13 @@
 module ApplicationHelper
 
   def logged_in?
-    if session[:user_id]
+    if session[:patron_id]
       return true
     end
   end
 
   def current_user
-    @patron ||= Patron.find(session[:user_id]) if logged_in?
+    @_patron ||= Patron.find(session[:patron_id]) if logged_in?
   end
 
 end

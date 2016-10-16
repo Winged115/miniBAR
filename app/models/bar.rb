@@ -11,9 +11,12 @@ class Bar < ActiveRecord::Base
   validates :state, presence: true, length: { is: 2 }
 
   def self.bar_search(criteria)
-    close_bars = self.where("zipcode = ?", "%#{criteria}%")
+    close_bars = self.where("zipcode = ?", criteria)
+    puts "close_bars"
+    p close_bars
     close_active_bars = close_bars.active_bars
-    close_active_bars
+    puts "close_active_bars"
+    p close_active_bars
   end
 
   def self.active_bars
