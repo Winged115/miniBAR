@@ -10,7 +10,7 @@ class TabsController < ApplicationController
     if  @tab.save
       redirect_to patron_tab_path
     else
-      @errors = @tab.errors.full_messages
+      @errors = ["There's been a problem opening your tab"]
       redirect_to bars_path
     end
   end
