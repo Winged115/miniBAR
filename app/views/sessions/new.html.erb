@@ -1,0 +1,7 @@
+<h2> Login </h2>
+
+<% if @errors %>
+  <%= render partial: "partials/errors", locals: { errors: @errors } %>
+<% end %>
+<%= render partial: "partials/login" %>
+

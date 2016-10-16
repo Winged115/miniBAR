@@ -11,7 +11,7 @@ class PatronsController < ApplicationController
       redirect_to edit_patron_path(@patron)
     else
       @errors = @patron.errors.full_messages
-      render_template new
+      render :new
     end
   end
 
@@ -19,5 +19,10 @@ class PatronsController < ApplicationController
     @patron = Patron.find(params[:id])
   end
 
+  private
+
+  def patron_params
+    params.require(:patron).permit(:first_name, :last_name, :email, :password)
+  end
 
 end
