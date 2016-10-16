@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :drinks, only: [:index]
 
   resources :patrons, except: [:index, :show, :destroy] do
-    resources :tabs, only: [:new, :create]
+    resources :tabs, only: [:new, :create, :show]
   end
 
   resources :bars, except: [:destroy, :show] do
