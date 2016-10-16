@@ -1,10 +1,10 @@
 <%= form_tag(sessions_path, method: "post") do %>
 
   <%= label_tag(:email, "Email") %>
-  <p><%= email_field :email, placeholder: "Email" %> </p>
+  <p><%= email_field_tag :email %> </p>
 
   <%= label_tag(:password, "Password") %>
-  <p><%= password_field :password, placeholder: "Password" %> </p>
+  <p><%= password_field_tag :password %> </p>
 
   <p><%= submit_tag ("You're Back!") %></p>
 <% end %>
