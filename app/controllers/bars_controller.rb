@@ -1,5 +1,16 @@
 class BarsController < ApplicationController
 
+
+  def index
+    @tab = Tab.new
+    @patron = Patron.new
+    if params[:search]
+      @active_bars = Bar.bar_search(params[:search])
+    else
+      @active_bars = Bar.all
+    end
+  end
+
   def new
     @bar = Bar.new
   end
@@ -28,5 +39,6 @@ class BarsController < ApplicationController
   def bar_params
     params.require(:bar).permit(:name, :email, :password, :address, :city, :state, :zipcode)
   end
+
 
 end
