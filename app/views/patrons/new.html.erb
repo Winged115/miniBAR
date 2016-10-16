@@ -1,0 +1,7 @@
+<%= form_for @patron do |f| %>
+<%= f.text_field :first_name, placeholder: "first name" %>
+<%= f.text_field :last_name, placeholder: "last name" %>
+<%= f.email_field :email, placeholder: "email" %>
+<%= f.password_field :password, placeholder: "password" %>
+<%= f.submit "Get To Drinkin!" %>
+<% end %>
