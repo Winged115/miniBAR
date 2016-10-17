@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :bars, except: [:destroy, :show] do
     resources :tabs, only: [:index]
   end
+  get '/patrons/payment_method' => 'patrons#payment_method'
+  post '/patrons/create_bt_customer' => 'patrons#create_bt_customer'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

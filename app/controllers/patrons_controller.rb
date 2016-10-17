@@ -20,12 +20,30 @@ class PatronsController < ApplicationController
     @patron = Patron.find(params[:id])
   end
 
-  def update
-    bt_customer_create_response = Braintree::Customer.create(account_params)
-    if bt_customer_create_response.succes?
-      Patron.create(first_name: , last_name: , customer_id: bt_customer_create_response.customer.id, user_id: )
-    else
+  # def update
+  #   bt_customer_create_response = Braintree::Customer.create(account_params)
+  #   if bt_customer_create_response.succes?
+  #     Patron.create(first_name: , last_name: , customer_id: bt_customer_create_response.customer.id, user_id: )
+  #   else
 
+  #   end
+  # end
+
+  def payment_method
+    @client_token = Braintree::ClientToken.generate()
+  end
+
+  def create_bt_customer
+    result = Braintree::Customer.create(
+      :first_name => current_user.first_name,
+      :last_name => current_user.last_name,
+      :payment_method_nonce => params['payment-method-nonce']
+      )
+    if result.success?
+      current_user.update_attributes(customer_id: result.customer.id)
+      redirect_to root_path
+    else
+      p result.errors
     end
   end
 
