@@ -31,7 +31,19 @@ class BarsController < ApplicationController
   end
 
   def update
-    # paypal things go here
+    @bar = Bar.find(params[:id])
+    if params[:bar][:close_all]
+      @bar.close_all_tabs
+      redirect_to settings_path(@bar)
+      flash[:success] = "All tabs have been closed"
+    elsif params[:bar][:discoverable]
+      toggle_discoverable(@bar)
+    else
+    end
+  end
+
+  def settings
+    @bar = Bar.find(params[:id])
   end
 
   private
@@ -39,6 +51,12 @@ class BarsController < ApplicationController
   def bar_params
     params.require(:bar).permit(:name, :email, :password, :address, :city, :state, :zipcode)
   end
+
+  def toggle_discoverable(bar)
+    bar.update_attributes(discoverable: params[:bar][:discoverable])
+    redirect_to settings_path(@bar)
+  end
+
 
 
 end
