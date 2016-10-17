@@ -62,6 +62,7 @@ class TabsController < ApplicationController
         :payment_method_token => payment_method_token.to_s,
         :service_fee_amount => '0.00'
       )
+    p transaction_result
     if transaction_result.success?
       p 'success'
     end
