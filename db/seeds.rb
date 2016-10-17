@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 rand_zip = ["60647", "60625", "60642"]
 rand_price = [25.00, 6.50, 3.00, 8.00, 7.50, 10.00, 100.00]
 rand_name = ["Beer", "Wine", "Cocktail", "Shot", "Mallort", "Old Style"]

@@ -16,8 +16,14 @@ Rails.application.routes.draw do
   resources :bars, except: [:destroy, :show] do
     resources :tabs, only: [:index]
   end
-
+  get '/patrons/payment_method' => 'patrons#payment_method'
+  post '/patrons/create_bt_customer' => 'patrons#create_bt_customer'
+  get '/bars/merchant_account' => 'bars#merchant_account'
+  post '/bars/create_bt_merchant' => 'bars#create_bt_merchant'
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
   get 'bars/:id/settings' => 'bars#settings', as: 'settings'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

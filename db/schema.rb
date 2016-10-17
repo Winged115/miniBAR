@@ -11,22 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016184007) do
+ActiveRecord::Schema.define(version: 20161017200015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bars", force: :cascade do |t|
-    t.string   "name",                            null: false
-    t.string   "email",                           null: false
-    t.string   "address",                         null: false
-    t.string   "city",                            null: false
-    t.string   "state",                           null: false
-    t.integer  "zipcode",                         null: false
-    t.boolean  "discoverable",    default: false
-    t.string   "password_digest",                 null: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "name",                                null: false
+    t.string   "email",                               null: false
+    t.string   "address",                             null: false
+    t.string   "city",                                null: false
+    t.string   "state",                               null: false
+    t.integer  "zipcode",                             null: false
+    t.boolean  "discoverable",        default: false
+    t.string   "password_digest",                     null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "merchant_account_id"
   end
 
   create_table "drinks", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20161016184007) do
     t.string   "password_digest", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "customer_id"
   end
 
   create_table "tab_items", force: :cascade do |t|
