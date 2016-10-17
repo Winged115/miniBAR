@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   root 'patrons#new'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :tabs, only: [:edit, :update, :show]
+  resources :tabs, only: [:edit, :update, :show] do
+    resources :drinks, only: [:index]
+  end
   resources :tab_items, only: [:create, :destroy]
-  resources :drinks, only: [:index]
 
   resources :patrons, except: [:index, :show, :destroy] do
     resources :tabs, only: [:new, :create]
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
   post '/bars/create_bt_merchant' => 'bars#create_bt_merchant'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'bars/:id/settings' => 'bars#settings', as: 'settings'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
