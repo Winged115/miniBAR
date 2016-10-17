@@ -24,4 +24,12 @@ class Bar < ActiveRecord::Base
     active_bars
   end
 
+  def close_all_tabs
+    open_tabs = tabs.where(closed: false)
+    open_tabs.each do |tab|
+      tab.closed = true
+      tab.save
+    end
+  end
+
 end
