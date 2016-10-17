@@ -1,0 +1,46 @@
+<h2> Enter Account Information </h2>
+
+<% if @errors %>
+<%= render partial: "partials/errors", locals: { errors: @errors } %>
+<% end %>
+
+<form id="merchant-register-form" action="/bars/create_bt_merchant" method="post">
+  <div id="error-message"></div>
+  <p>Individual</p>
+  First name: <input type="text" name="first_name">
+  Last name: <input type="text" name="last_name">
+  Email: <input type="email" name="email">
+  Phone: <input type="tel" name="phone">
+  Date of Birth: <input type="date" name="date_of_birth">
+  Last 4 digits of SSN: <input type="text" name="ssn">
+  Street Address: <input type="text" name="individual[street_address]">
+  City: <input type="text" name="individual[locality]">
+  State: <input type="text" name="individual[region]">
+  ZIP Code: <input type="text" name="individual[postal_code]">
+  <p>Business</p>
+  Legal Name: <input type="text" name="legal_name">
+  DBa Name: <input type="text" name="dba_name">
+  Tax ID: <input type="text" name="tax_id">
+  Phone: <input type="tel" name="phone">
+  Street Address: <input type="text" name="business[street_address]">
+  City: <input type="text" name="business[locality]">
+  State: <input type="text" name="business[region]">
+  ZIP Code: <input type="text" name="business[postal_code]">
+  <p>Funding</p>
+  Descriptor: <input type="text" name="descriptor">
+  Email: <input type="email" name="funding[email]">
+  Mobile Phone: <input type="tel" name="funding[mobile_phone]">
+  Account Number: <input type="text" name="account_number">
+  Routing Number: <input type="text" name="routing_number">
+  <input type="hidden" name="authenticity_token" value=>
+  <input type="submit" value="Add bank account">
+</form>
+<script>
+var form = document.querySelector('#checkout-form');
+var submit = document.querySelector('input[type="submit"]');
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  document.querySelector('input[name="authenticity_token"]').value = document.querySelector('meta[name="csrf-token"]').content;
+  form.submit();
+});
+</script>

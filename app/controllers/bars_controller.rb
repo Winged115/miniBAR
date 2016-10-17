@@ -19,7 +19,7 @@ class BarsController < ApplicationController
     @bar = Bar.new(bar_params)
     if @bar.save
       session[:bar_id] = @bar.id
-      redirect_to edit_bar_path(@bar)
+      redirect_to bars_merchant_account_path
     else
       @errors = @bar.errors.full_messages
       render :new
@@ -30,53 +30,58 @@ class BarsController < ApplicationController
     @bar = Bar.find(params[:id])
   end
 
+  def merchant_account
+  end
+
   def create_bt_merchant
+    session[:patron_id]=nil
     merchant_account_params = {
       :individual => {
-        :first_name => "Jane",
-        :last_name => "Doe",
-        :email => "jane@14ladders.com",
-        :phone => "5553334444",
-        :date_of_birth => "1981-11-19",
-        :ssn => "456-45-4567",
+        :first_name => params[:first_name],
+        :last_name => params[:last_name],
+        :email => params[:email],
+        :phone => params[:phone],
+        :date_of_birth => params[:date_of_birth],
+        :ssn => params[:ssn],
         :address => {
-          :street_address => "111 Main St",
-          :locality => "Chicago",
-          :region => "IL",
-          :postal_code => "60622"
+          :street_address => params[:individual][:street_address],
+          :locality => params[:individual][:locality],
+          :region => params[:individual][:region],
+          :postal_code => params[:individual][:postal_code]
         }
         },
         :business => {
-          :legal_name => "Jane's Ladders",
-          :dba_name => "Jane's Ladders",
-          :tax_id => "98-7654321",
+          :legal_name => params[:legal_name],
+          :dba_name => params[:dba_name],
+          :tax_id => params[:tax_id],
           :address => {
-            :street_address => "111 Main St",
-            :locality => "Chicago",
-            :region => "IL",
-            :postal_code => "60622"
+            :street_address => params[:business][:street_address],
+            :locality => params[:business][:locality],
+            :region => params[:business][:region],
+            :postal_code => params[:business][:postal_code]
           }
           },
           :funding => {
-            :descriptor => "Blue Ladders",
+            :descriptor => params[:descriptor],
             :destination => Braintree::MerchantAccount::FundingDestination::Bank,
-            :email => "funding@blueladders.com",
-            :mobile_phone => "5555555555",
-            :account_number => "1123581321",
-            :routing_number => "071101307"
+            :email => params[:funding][:email],
+            :mobile_phone => params[:funding][:mobile_phone],
+            :account_number => params[:account_number],
+            :routing_number => params[:routing_number]
             },
             :tos_accepted => true,
-            :master_merchant_account_id => "14ladders_marketplace",
-            :id => "blue_ladders_store"
+            :master_merchant_account_id => ENV['BT_MERCHANT_ID']
           }
           result = Braintree::MerchantAccount.create(
             merchant_account_params
             )
           if result.success?
-            current_user.update_attributes(customer_id: result.customer.id)
+            p result
+            current_user.update_attributes(merchant_account_id: result.merchant_account.id)
             redirect_to root_path
           else
             p result.errors
+            redirect_to root_path
           end
         end
 
