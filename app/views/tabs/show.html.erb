@@ -1,11 +1,20 @@
-<h2>Tab For: <%= @tab.patron.last_name %></h2>
+<% if session[:bar_id] %>
+  <h2>Tab For: <%= @tab.patron.last_name %></h2>
+<% elsif session[:patron_id] %>
+  <h2><%= @tab.bar.name %></h2>
+<% end %>
 <!-- Put Total amount Here -->
+<% if session[:bar_id] %>
   <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
+<% end %>
   <% @tab.tab_items.each do |item| %>
     <ul>
-      <li><%= item.drink.drink_name %></li><br>
-      $ <%= item.drink.price %>
+      <li><%= item.drink.drink_name %> ~
+      $ <%= item.drink.price %></li>
     </ul>
   <% end %>
-
+<% if session[:patron_id] %>
 <button><%= link_to "close tab", edit_tab_path(@tab) %></button>
+<% elsif session[:bar_id] %>
+<button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
+<% end %>
