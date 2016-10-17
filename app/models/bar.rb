@@ -10,6 +10,14 @@ class Bar < ActiveRecord::Base
   validates :zipcode, presence: true, length: { is: 5 }
   validates :state, presence: true, length: { is: 2 }
 
+  validate :patron_email_nonexistent
+
+  def patron_email_nonexistent
+    if Patron.find_by(email: self.email)
+      errors.add :email, "is taken"
+    end
+  end
+
   def self.bar_search(criteria)
     close_bars = self.where("zipcode = ?", criteria)
     puts "close_bars"
@@ -22,6 +30,14 @@ class Bar < ActiveRecord::Base
   def self.active_bars
     active_bars = self.where("discoverable = ?", true)
     active_bars
+  end
+
+  def close_all_tabs
+    open_tabs = tabs.where(closed: false)
+    open_tabs.each do |tab|
+      tab.closed = true
+      tab.save
+    end
   end
 
 end
