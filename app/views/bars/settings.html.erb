@@ -6,7 +6,7 @@
   <% end %>
 <% end %>
 
-<button><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success), :method => :put %></button>
+<button id="close-all"><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success), remote: true, :method => :put %></button>
 
 <p>By hitting "close all open tabs", you'll be closing all the bar's active tabs for tonight.</p>
 <p>If you aren't tired, wasted, and closed for the night, and this isn't what you'd like to do, don't.</p>
