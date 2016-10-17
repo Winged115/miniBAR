@@ -10,6 +10,14 @@ class Bar < ActiveRecord::Base
   validates :zipcode, presence: true, length: { is: 5 }
   validates :state, presence: true, length: { is: 2 }
 
+  validate :patron_email_nonexistent
+
+  def patron_email_nonexistent
+    if Patron.find_by(email: self.email)
+      errors.add :email, "is taken"
+    end
+  end
+
   def self.bar_search(criteria)
     close_bars = self.where("zipcode = ?", criteria)
     puts "close_bars"
