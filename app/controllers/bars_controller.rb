@@ -3,7 +3,7 @@ class BarsController < ApplicationController
 
   def index
     @tab = Tab.new
-    @patron = Patron.new
+    @patron = Patron.find(session[:patron_id])
     if params[:search]
       @active_bars = Bar.bar_search(params[:search])
     else

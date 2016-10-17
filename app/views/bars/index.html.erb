@@ -15,8 +15,9 @@
   <% @active_bars.each do |bar| %>
     <li>
       <%= form_for ([@patron,@tab]), {action: "create"} do |f| %>
-        <%= link_to bar.name, patron_tab_path(@patron, @tab), :method => :post %><br>
+        <%= link_to bar.name, patron_tabs_path(@patron, @tab), :method => :post %><br>
         <%= f.hidden_field :bar_id, value: bar.id %>
+        <%= f.hidden_field :patron_id, value: session[:patron_id] %>
         <%= f.submit "Open Tab" %>
         <% end %>
     </li><br>
