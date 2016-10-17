@@ -1,4 +1,4 @@
-<h2><%= @tab.patron.last_name %></h2>
+<h2>Tab For: <%= @tab.patron.last_name %></h2>
 <!-- Put Total amount Here -->
 <% if session[:bar_id] %>
   <button><%= link_to "Add Item", drinks_path %></button>
@@ -9,4 +9,4 @@
     </ul>
   <% end %>
 <% end %>
-<button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
+<button><%= link_to "close tab", edit_tab_path(@tab) %></button>

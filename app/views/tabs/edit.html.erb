@@ -1,1 +1,9 @@
+<h3>Have a nice night <%= @tab.patron.first_name %>!</h3>
+<p>don't forget to help the person that helped you, and be sure to get home safe</p>
+  <span><%= @tab.total_amount %></span>
+  <%= form_tag(tab_path(@tab), method: "put") do %>
+  <label>Tip Amount:</label>
+  <%= text_field_tag :tip, (@tab.total_amount * 0.2).round(2) %>
+  <%= submit_tag ("close tab") %>
+  <% end %>
 

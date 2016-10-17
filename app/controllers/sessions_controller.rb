@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    empty_session_tokens
     @patron = Patron.find_by(email: params[:email])
     @bar = Bar.find_by(email: params[:email])
     if @patron
@@ -37,6 +38,12 @@ class SessionsController < ApplicationController
       session.destroy
       redirect_to new_session_path
     end
+  end
+
+  private
+
+  def empty_session_tokens
+    session.destroy
   end
 
 end
