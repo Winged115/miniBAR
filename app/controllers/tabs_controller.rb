@@ -15,4 +15,10 @@ class TabsController < ApplicationController
     end
   end
 
+  def index
+    @bar = Bar.find(current_user.id)
+    @tabs = @bar.tabs
+
+  end
+
 end
