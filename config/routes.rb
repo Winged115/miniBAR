@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   root 'patrons#new'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :tabs, only: [:edit, :update, :show]
+  resources :tabs, only: [:edit, :update, :show] do
+    resources :drinks, only: [:index]
+  end
   resources :tab_items, only: [:create, :destroy]
-  resources :drinks, only: [:index]
 
   resources :patrons, except: [:index, :show, :destroy] do
     resources :tabs, only: [:new, :create]
