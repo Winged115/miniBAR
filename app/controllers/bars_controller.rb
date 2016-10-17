@@ -18,6 +18,7 @@ class BarsController < ApplicationController
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
+      session[:patron_id] = nil
       session[:bar_id] = @bar.id
       redirect_to edit_bar_path(@bar)
     else

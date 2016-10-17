@@ -7,6 +7,7 @@ class PatronsController < ApplicationController
   def create
     @patron = Patron.new(patron_params)
     if @patron.save
+      session[:bar_id] = nil
       session[:patron_id] = @patron.id
       redirect_to edit_patron_path(@patron)
     else
