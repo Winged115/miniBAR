@@ -11,10 +11,16 @@ class TabsController < ApplicationController
 
   def update
     @tab = Tab.find(params[:id])
-    if @tab
+    if @tab && session[:patron_id]
       @tab.closed = true
-      @tab.total = params[:total]
+      @tab.total_amount = params[:total]
+      @tab.save
       redirect_to bars_path
+    elsif @tab && session[:bar_id]
+      @tab.closed = true
+      @tab.total_amount = (@tab.total_owed * 1.25)
+      @tab.save
+      redirect_to bar_tabs_path(@tab.bar)
     else
       @errors = ["Something went wrong"]
       render :edit
@@ -29,6 +35,11 @@ class TabsController < ApplicationController
       @errors = ["There's been a problem opening your tab"]
       redirect_to bars_path
     end
+  end
+
+  def index
+    @bar = Bar.find(current_user.id)
+    @tabs = @bar.tabs.where(closed: false)
   end
 
   private

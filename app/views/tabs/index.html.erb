@@ -1,0 +1,13 @@
+<h1>Open Tabs</h1>
+
+<% if @tabs %>
+  <ul id="tabs-list">
+    <% @tabs.each do |tab| %>
+      <h3>
+          <%= link_to tab.patron.full_name, tab_path(tab), :method => :get %><br>
+      </h3>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>All tabs have been closed</h3>
+<% end %>
