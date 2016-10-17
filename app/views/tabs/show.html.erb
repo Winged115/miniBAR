@@ -6,14 +6,26 @@
 <span>$$ <%= @tab.show_total %></span><br>
 
 <% if session[:bar_id] %>
-  <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
+<button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
+  <% @tab.tab_items.each do |item| %>
+    <ul>
+      <li><%= item.drink.drink_name %> ~
+        $ <%= item.drink.price %>
+        <%= link_to "remove drink", tab_item_path(item), :method => :delete %>
+      </li>
+    </ul>
+  <% end %>
 <% end %>
+
+<% if session[:patron_id] %>
   <% @tab.tab_items.each do |item| %>
     <ul>
       <li><%= item.drink.drink_name %> ~
       $ <%= item.drink.price %></li>
     </ul>
+<% end %>
   <% end %>
+
 <% if session[:patron_id] %>
   <button><%= link_to "close tab", edit_tab_path(@tab) %></button>
 <% elsif session[:bar_id] %>

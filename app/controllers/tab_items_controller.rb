@@ -12,7 +12,10 @@ class TabItemsController < ApplicationController
   end
 
   def destroy
-
+    tab_item = TabItem.find(params[:id])
+    tab = tab_item.tab
+    tab_item.destroy
+    redirect_to tab_path(tab)
   end
 
 
