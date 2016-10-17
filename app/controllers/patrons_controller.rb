@@ -9,7 +9,7 @@ class PatronsController < ApplicationController
     account_params = {}
     if @patron.save
       session[:patron_id] = @patron.id
-      redirect_to edit_patron_path(@patron)
+      redirect_to patrons_payment_method_path
     else
       @errors = @patron.errors.full_messages
       render :new
