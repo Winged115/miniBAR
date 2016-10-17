@@ -9,11 +9,15 @@ class TabsController < ApplicationController
     @tab = Tab.new
   end
 
+  def edit
+    @tab = Tab.find(params[:id])
+  end
+
   def update
     @tab = Tab.find(params[:id])
     if @tab && session[:patron_id]
       @tab.closed = true
-      @tab.total_amount = params[:total]
+      @tab.total_amount = @tab.total_amount + params[:tip].to_f
       @tab.save
       redirect_to bars_path
     elsif @tab && session[:bar_id]
