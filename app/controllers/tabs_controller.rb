@@ -42,7 +42,8 @@ class TabsController < ApplicationController
 
   def index
     @bar = Bar.find(current_user.id)
-    @tabs = @bar.tabs.where(closed: false)
+    all_open_tabs = @bar.tabs.where(closed: false)
+    @tabs = all_open_tabs.sort_by {|tab| tab.patron.last_name}
   end
 
   private
