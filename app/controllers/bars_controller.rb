@@ -17,13 +17,6 @@ class BarsController < ApplicationController
 
   def create
     @bar = Bar.new(bar_params)
-    account_params = {}
-    bt_merchant_create_response = Braintree::MerchantAccount.create(account_params)
-    if bt_merchant_create_response.success?
-      Bar.create(name: , address: , merchant_account_id: bt_merchant_create_response.id, user_id: )
-    else
-
-    end
     if @bar.save
       session[:bar_id] = @bar.id
       redirect_to edit_bar_path(@bar)
@@ -38,7 +31,13 @@ class BarsController < ApplicationController
   end
 
   def update
-    # paypal things go here
+    account_params = {}
+    bt_merchant_create_response = Braintree::MerchantAccount.create(account_params)
+    if bt_merchant_create_response.success?
+      Bar.create(name: , address: , merchant_account_id: bt_merchant_create_response.id, user_id: )
+    else
+
+    end
   end
 
   private
