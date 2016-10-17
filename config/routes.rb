@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
   get '/patrons/payment_method' => 'patrons#payment_method'
   post '/patrons/create_bt_customer' => 'patrons#create_bt_customer'
+  post '/bars/create_bt_merchant' => 'bars#create_bt_merchant'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

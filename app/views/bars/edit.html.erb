@@ -4,4 +4,31 @@
   <%= render partial: "partials/errors", locals: { errors: @errors } %>
 <% end %>
 
-<!-- payment fields go here -->
+<form id="merchant-register-form" action="/bars/create_bt_merchant" method="post">
+  <div id="error-message"></div>
+  <p>Individual</p>
+  <input type="text" name="first_name">
+  <input type="text" name="last_name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="date" name="date_of_birth">
+  <input type="text" name="individual[street_address]">
+  <input type="text" name="individual[locality]">
+  <input type="text" name="individual[region]">
+  <input type="text" name="individual[postal_code]">
+  <p>Business</p>
+  <input type="text" name="legal_name">
+  <input type="text" name="dba_name">
+  <input type="email" name="tax_id">
+  <input type="tel" name="phone">
+  <input type="text" name="business[street_address]">
+  <input type="text" name="business[locality]">
+  <input type="text" name="business[region]">
+  <input type="text" name="business[postal_code]">
+
+
+
+  <input type="hidden" name="payment-method-nonce">
+  <input type="hidden" name="authenticity_token">
+  <input type="submit" value="Add payment method" disabled>
+</form>
