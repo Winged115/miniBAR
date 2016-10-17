@@ -11,46 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015214328) do
+
+ActiveRecord::Schema.define(version: 20161016184007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bars", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "merchant_account_id"
-    t.boolean  "discoverable"
-    t.integer  "user_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "name",                            null: false
+    t.string   "email",                           null: false
+    t.string   "address",                         null: false
+    t.string   "city",                            null: false
+    t.string   "state",                           null: false
+    t.integer  "zipcode",                         null: false
+    t.boolean  "discoverable",    default: false
+    t.string   "password_digest",                 null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "drinks", force: :cascade do |t|
+    t.string   "drink_name", null: false
+    t.float    "price",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "patrons", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "customer_id"
-    t.string   "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "first_name",      null: false
+    t.string   "last_name",       null: false
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+  create_table "tab_items", force: :cascade do |t|
+    t.integer  "drink_id",   null: false
+    t.integer  "tab_id",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  create_table "tabs", force: :cascade do |t|
+    t.float    "total_amount", default: 0.0
+    t.integer  "patron_id",                    null: false
+    t.integer  "bar_id",                       null: false
+    t.boolean  "closed",       default: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
 end

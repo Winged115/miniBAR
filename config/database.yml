@@ -23,13 +23,17 @@ default: &default
 
 development:
   <<: *default
-  database: miniBar_development
+  database: miniBAR_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
+<<<<<<< HEAD
   #username: miniBar
+=======
+  #username: miniBAR
+>>>>>>> 8b89a67b0b251eb77cd778af9431f5ad321bed31
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +61,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: miniBar_test
+  database: miniBAR_test
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: miniBar_production
-  username: miniBar
+  database: miniBAR_production
+  username: miniBAR
+
   password: <%= ENV['MINIBAR_DATABASE_PASSWORD'] %>
