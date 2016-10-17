@@ -1,12 +1,11 @@
 <h2>Tab For: <%= @tab.patron.last_name %></h2>
 <!-- Put Total amount Here -->
-<% if session[:bar_id] %>
-  <button><%= link_to "Add Item", drinks_path %></button>
+  <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
   <% @tab.tab_items.each do |item| %>
     <ul>
       <li><%= item.drink.drink_name %></li><br>
       $ <%= item.drink.price %>
     </ul>
   <% end %>
-<% end %>
+
 <button><%= link_to "close tab", edit_tab_path(@tab) %></button>
