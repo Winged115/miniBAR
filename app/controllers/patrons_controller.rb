@@ -42,7 +42,7 @@ class PatronsController < ApplicationController
       )
     if result.success?
       current_user.update_attributes(customer_id: result.customer.id)
-      redirect_to root_path
+      redirect_to bars_path
     else
       p result.errors
     end

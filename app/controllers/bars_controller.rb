@@ -95,7 +95,7 @@ class BarsController < ApplicationController
           if result.success?
             p result
             current_user.update_attributes(merchant_account_id: result.merchant_account.id)
-            redirect_to root_path
+            redirect_to bar_tabs_path(session[:bar_id])
           else
             p result.errors
             redirect_to root_path
