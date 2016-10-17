@@ -34,7 +34,7 @@ class TabsController < ApplicationController
   def create
     @tab = Tab.new(tab_params)
     if  @tab.save
-      redirect_to patron_tab_path(session[:patron_id],@tab)
+      redirect_to tab_path(@tab)
     else
       @errors = ["There's been a problem opening your tab"]
       redirect_to bars_path
