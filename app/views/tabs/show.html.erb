@@ -3,7 +3,8 @@
 <% elsif session[:patron_id] %>
   <h2><%= @tab.bar.name %></h2>
 <% end %>
-<!-- Put Total amount Here -->
+<span>$$ <%= @tab.show_total %></span><br>
+
 <% if session[:bar_id] %>
   <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
 <% end %>
@@ -14,7 +15,7 @@
     </ul>
   <% end %>
 <% if session[:patron_id] %>
-<button><%= link_to "close tab", edit_tab_path(@tab) %></button>
+  <button><%= link_to "close tab", edit_tab_path(@tab) %></button>
 <% elsif session[:bar_id] %>
-<button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
+  <button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
 <% end %>

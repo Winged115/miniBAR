@@ -8,8 +8,12 @@ class Tab < ActiveRecord::Base
     drinks.inject (0) {|sum, drink| sum + drink.price}
   end
 
-  def american_currency
-
+  def show_total
+    sum = 0
+    tab_items.each do |item|
+       sum += item.drink.price
+    end
+    sum
   end
 
 end
