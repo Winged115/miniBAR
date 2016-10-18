@@ -1,3 +1,4 @@
+
 class TabsController < ApplicationController
 
 
@@ -75,7 +76,8 @@ class TabsController < ApplicationController
 
   def index
     @bar = Bar.find(current_user.id)
-    @tabs = @bar.tabs.where(closed: false)
+    all_open_tabs = @bar.tabs.where(closed: false)
+    @tabs = all_open_tabs.sort_by {|tab| tab.patron.last_name}
   end
 
   private
@@ -83,5 +85,22 @@ class TabsController < ApplicationController
   def tab_params
     params.require(:tab).permit(:total_amount, :patron_id, :bar_id, :closed)
   end
+
+  # def generate_transaction(tab)
+  #   bar = Bar.find(tab.bar_id)
+  #   patron = Patron.find(tab.patron_id)
+  #   bt_customer = Braintree::Customer.find(patron.customer_id)
+  #   payment_method_token = bt_customer.credit_cards[0].token
+  #   transaction_result = Braintree::Transaction.sale(
+  #       :merchant_account_id => bar.merchant_account_id.to_s,
+  #       :amount => tab.total_amount.to_s,
+  #       :payment_method_token => payment_method_token.to_s,
+  #       :service_fee_amount => '0.00'
+  #     )
+  #   p transaction_result
+  #   if transaction_result.success?
+  #     p 'success'
+  #   end
+  # end
 
 end

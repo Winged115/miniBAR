@@ -1,6 +1,5 @@
 class BarsController < ApplicationController
 
-
   def index
     @tab = Tab.new
     @patron = Patron.find(current_user.id)
