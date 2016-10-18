@@ -87,7 +87,7 @@ class BarsController < ApplicationController
             :routing_number => params[:routing_number]
             },
             :tos_accepted => true,
-            :master_merchant_account_id => ENV['BT_MERCHANT_ID']
+            :master_merchant_account_id => 'minibar1234567890'
           }
           result = Braintree::MerchantAccount.create(
             merchant_account_params
