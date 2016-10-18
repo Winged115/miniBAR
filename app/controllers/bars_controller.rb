@@ -18,6 +18,7 @@ class BarsController < ApplicationController
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
+      session[:patron_id] = nil
       session[:bar_id] = @bar.id
       redirect_to bars_merchant_account_path
     else
@@ -94,7 +95,7 @@ class BarsController < ApplicationController
           if result.success?
             p result
             current_user.update_attributes(merchant_account_id: result.merchant_account.id)
-            redirect_to root_path
+            redirect_to bar_tabs_path(session[:bar_id])
           else
             p result.errors
             redirect_to root_path

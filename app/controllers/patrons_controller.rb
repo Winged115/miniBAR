@@ -8,6 +8,7 @@ class PatronsController < ApplicationController
     @patron = Patron.new(patron_params)
     account_params = {}
     if @patron.save
+      session[:bar_id] = nil
       session[:patron_id] = @patron.id
       redirect_to patrons_payment_method_path
     else
@@ -41,7 +42,7 @@ class PatronsController < ApplicationController
       )
     if result.success?
       current_user.update_attributes(customer_id: result.customer.id)
-      redirect_to root_path
+      redirect_to bars_path
     else
       p result.errors
     end
