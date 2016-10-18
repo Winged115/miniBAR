@@ -700,4 +700,58 @@ hr {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.tables {
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: 3px;
+  border-spacing: 0;
+  width: 100%; }
+  .tables tbody {
+    background-color: #fcfcfc; }
+    .tables tbody tr:hover > td, .tables tbody tr:hover > th {
+      background-color: #efefef; }
+    .tables tbody tr:nth-child(even) {
+      background-color: #f7f7f7; }
+      .tables tbody tr:nth-child(even):hover > td {
+        background-color: #eaeaea; }
+  .tables thead:first-of-type tr:first-child > th:first-child {
+    border-top-left-radius: 3px; }
+  .tables thead:first-of-type tr:first-child > th:last-child {
+    border-top-right-radius: 3px; }
+  .tables tbody:last-child tr:last-child > td:first-child {
+    border-bottom-left-radius: 3px; }
+  .tables tbody:last-child tr:last-child > td:last-child {
+    border-bottom-right-radius: 3px; }
+  .tables thead th {
+    background-color: white;
+    border-bottom: 0;
+    border-left: 1px solid #ddd;
+    padding: 0.75em 1em;
+    text-align: left; }
+    .tables thead th:first-child {
+      border-left: 0; }
+  .tables tbody {
+    background-color: #fcfcfc; }
+    .tables tbody td {
+      border-bottom: 0;
+      border-left: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      padding: 0.75em 1em; }
+      .tables tbody td:first-child {
+        border-left: 0; }
+      .tables tbody td button {
+        display: inline-block;
+        font-size: 0.7em;
+        line-height: 1.5;
+        margin-bottom: 0.3em;
+        margin-right: 0.5em;
+        outline: none;
+        padding: 0.3em 1em;
+        width: 100%; }
+        @media screen and (min-width: 600px) {
+          .tables tbody td button {
+            margin-bottom: 0;
+            width: auto; } }
+
 /*# sourceMappingURL=app.css.map */
