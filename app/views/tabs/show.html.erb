@@ -3,7 +3,7 @@
 <% elsif session[:patron_id] %>
   <h2><%= @tab.bar.name %></h2>
 <% end %>
-<span>Total: $ <%= @tab.show_total %></span>
+<h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
 <br>
 
 <% if session[:bar_id] %>
