@@ -1,6 +1,11 @@
-.box
-  background: pink
-  +size(100px)
-  margin: 20px
+.boxes
+  +clearfix
+  +outer-container
 
+.box
+  background: red
+  +size(25%)
+  margin: 20px
+  float: left
+  +span-columns(4)
 

@@ -3,13 +3,17 @@
 
 
 <% if @tabs %>
+<div class="boxes">
   <ul id="tabs-list">
     <% @tabs.each do |tab| %>
-      <h3>
-          <%= link_to tab.patron.full_name, tab_path(tab), :method => :get %><br>
-      </h3>
+      <div class="box">
+        <h3>
+            <%= link_to tab.patron.full_name, tab_path(tab), :method => :get %><br>
+        </h3>
+      </div>
     <% end %>
   </ul>
+</div>
 <% else %>
   <h3>All tabs have been closed</h3>
 <% end %>
