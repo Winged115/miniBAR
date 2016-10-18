@@ -3,18 +3,19 @@
 <% elsif session[:patron_id] %>
   <h2><%= @tab.bar.name %></h2>
 <% end %>
-<span>$$ <%= @tab.show_total %></span><br>
+<span>Total: $ <%= @tab.show_total %></span>
+<br>
 
 <% if session[:bar_id] %>
-<button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
-  <% @tab.tab_items.each do |item| %>
-    <ul>
+  <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
+  <ul>
+    <% @tab.tab_items.each do |item| %>
       <li><%= item.drink.drink_name %> ~
         $ <%= item.drink.price %>
-        <%= link_to "remove drink", tab_item_path(item), :method => :delete %>
+        <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
       </li>
-    </ul>
-  <% end %>
+    <% end %>
+  </ul>
 <% end %>
 
 <% if session[:patron_id] %>

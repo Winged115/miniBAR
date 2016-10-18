@@ -19,7 +19,10 @@ class TabItemsController < ApplicationController
     tab_item = TabItem.find(params[:id])
     tab = tab_item.tab
     tab_item.destroy
-    redirect_to tab_path(tab)
+    respond_to do |format|
+      format.html { redirect_to tab_path(tab) }
+      format.js { render :file => "/drinks/destroy.js.erb" }
+    end
   end
 
 
