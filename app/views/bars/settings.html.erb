@@ -1,14 +1,9 @@
 <h1>Edit Settings</h1>
 
-<% if flash %>
-  <% flash.each do |key, value| %>
-        <div><%= value %></div>
-  <% end %>
-<% end %>
 
-<button id="close-all"><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success), remote: true, :method => :put %></button>
+<button><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success, :format => :js), id: "close-all", remote: true, :method => :put %></button>
 
-<p>By hitting "close all open tabs", you'll be closing all the bar's active tabs for tonight.</p>
+<p>By hitting "close all open tabs", you'll be closing all the bar's active tabs for the night.</p>
 <p>If you aren't tired, wasted, and closed for the night, and this isn't what you'd like to do, don't.</p>
 
 <% if @bar.discoverable %>

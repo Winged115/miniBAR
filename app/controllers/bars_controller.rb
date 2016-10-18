@@ -36,13 +36,12 @@ class BarsController < ApplicationController
   def update
     @bar = Bar.find(params[:id])
     if params[:bar][:close_all]
-      respond_to do |format|
-        format.html
-        format.json
-      end
       @bar.close_all_tabs
-      redirect_to settings_path(@bar)
-      flash[:success] = "All tabs have been closed"
+      # flash[:success] = "All tabs have been closed"
+      respond_to do |format|
+        format.html { redirect_to settings_path(@bar) }
+        format.js
+      end
     elsif params[:bar][:discoverable]
       toggle_discoverable(@bar)
     else
