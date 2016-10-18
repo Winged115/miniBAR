@@ -13,9 +13,9 @@
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 12%);
   $table-header-background: lighten($table-background, 10%);
-  $table-hover-background: darken($table-background, 5%);
+  $table-hover-background: darken($table-background, 10%);
   $table-stripe-background: darken($table-background, 2%);
-  $table-stripe-background-hover: darken($table-stripe-background, 5%);
+  $table-stripe-background-hover: darken($table-stripe-background, 10%);
   $table-padding: 0.75em 1em;
 
   border: $table-border;

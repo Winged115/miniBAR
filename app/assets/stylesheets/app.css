@@ -710,11 +710,11 @@ hr {
   .tables tbody {
     background-color: #fcfcfc; }
     .tables tbody tr:hover > td, .tables tbody tr:hover > th {
-      background-color: #efefef; }
+      background-color: #e2e2e2; }
     .tables tbody tr:nth-child(even) {
       background-color: #f7f7f7; }
       .tables tbody tr:nth-child(even):hover > td {
-        background-color: #eaeaea; }
+        background-color: #dddddd; }
   .tables thead:first-of-type tr:first-child > th:first-child {
     border-top-left-radius: 3px; }
   .tables thead:first-of-type tr:first-child > th:last-child {

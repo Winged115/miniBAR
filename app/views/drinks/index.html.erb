@@ -1,15 +1,5 @@
 <h3>Add drinks to tab</h3>
-<% @drinks.each do |drink| %>
-  <ul>
-    <li><%= drink.drink_name %> : <%= drink.price %></li>
 
-    <%= form_for @tab_item do |f| %>
-    <%= f.hidden_field :drink_id, value: drink.id %>
-    <%= f.hidden_field :tab_id, value: @tab.id %>
-    <%= f.submit "add item" %>
-    <% end %>
-  </ul>
-<% end %>
 <table class="tables">
   <thead>
     <tr>
@@ -18,26 +8,31 @@
       <th>Add Item</th>
     </tr>
   </thead>
+<% @drinks.each do |drink| %>
   <tbody>
     <tr>
-      <td>Row 1 Cell 1</td>
-      <td>Row 1 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
+    <% if drink.id.odd? %>
+    <%= form_for @tab_item do |f| %>
+    <%= f.hidden_field :drink_id, value: drink.id %>
+    <%= f.hidden_field :tab_id, value: @tab.id %>
+      <td><%= drink.drink_name %></td>
+      <td><%= drink.price %></td>
+
+      <td><button><%= f.submit "add item" %></button></td>
+    <% end %>
+    <% end %>
     </tr>
     <tr>
-      <td>Row 2 Cell 1</td>
-      <td>Row 2 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 3 Cell 1</td>
-      <td>Row 3 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 4 Cell 1</td>
-      <td>Row 4 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
+    <% if drink.id.even? %>
+    <%= form_for @tab_item do |f| %>
+    <%= f.hidden_field :drink_id, value: drink.id %>
+    <%= f.hidden_field :tab_id, value: @tab.id %>
+      <td><%= drink.drink_name %></td>
+      <td><%= drink.price %></td>
+      <td><button><%= f.submit "add item" %></button></td>
+      <% end %>
+    <% end %>
     </tr>
   </tbody>
+<% end %>
 </table>
