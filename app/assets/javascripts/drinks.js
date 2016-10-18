@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   $("form").on("submit", function () {
     console.log("logged");
     console.log($(this));
