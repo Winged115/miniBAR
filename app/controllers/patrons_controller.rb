@@ -10,6 +10,7 @@ class PatronsController < ApplicationController
     if @patron.save
       session[:bar_id] = nil
       session[:patron_id] = @patron.id
+      p session[:patron_id]
       redirect_to patrons_payment_method_path
     else
       @errors = @patron.errors.full_messages
