@@ -753,5 +753,7 @@ hr {
           .tables tbody td button {
             margin-bottom: 0;
             width: auto; } }
+  .tables .add-item-forms {
+    width: 50%; }
 
 /*# sourceMappingURL=app.css.map */

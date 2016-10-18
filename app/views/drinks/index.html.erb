@@ -1,38 +1,26 @@
 <h3>Add drinks to tab</h3>
-
-<table class="tables">
-  <thead>
-    <tr>
-      <th>Drink</th>
-      <th>Price</th>
-      <th>Add Item</th>
-    </tr>
-  </thead>
-<% @drinks.each do |drink| %>
-  <tbody>
-    <tr>
-    <% if drink.id.odd? %>
-    <%= form_for @tab_item do |f| %>
-    <%= f.hidden_field :drink_id, value: drink.id %>
-    <%= f.hidden_field :tab_id, value: @tab.id %>
-      <td><%= drink.drink_name %></td>
-      <td><%= drink.price %></td>
-
-      <td><button><%= f.submit "add item" %></button></td>
-    <% end %>
-    <% end %>
-    </tr>
-    <tr>
-    <% if drink.id.even? %>
-    <%= form_for @tab_item do |f| %>
-    <%= f.hidden_field :drink_id, value: drink.id %>
-    <%= f.hidden_field :tab_id, value: @tab.id %>
-      <td><%= drink.drink_name %></td>
-      <td><%= drink.price %></td>
-      <td><button><%= f.submit "add item" %></button></td>
+<%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
+  <table class="tables">
+    <thead>
+      <tr>
+        <th>Drink</th>
+        <th>Price</th>
+        <th>Add Item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @drinks.each do |drink| %>
+        <tr>
+          <td><%= drink.drink_name %></td>
+          <td><%= drink.price %></td>
+          <td>
+            <%= form_for @tab_item do |f| %>
+              <%= f.hidden_field :drink_id, value: drink.id %>
+              <%= f.hidden_field :tab_id, value: @tab.id %>
+              <%= f.submit "add item" %>
+            <% end %>
+          </td>
+        </tr>
       <% end %>
-    <% end %>
-    </tr>
-  </tbody>
-<% end %>
-</table>
+    </tbody>
+  </table>
