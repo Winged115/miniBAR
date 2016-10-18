@@ -2,12 +2,16 @@ class TabItemsController < ApplicationController
 
   def create
     @tab_item = TabItem.new(tab_item_params)
-    if @tab_item.save
-      @tab = @tab_item.tab
-      redirect_to tab_path(@tab)
-    else
-      @errors = ["There's been a problem"]
-      render '/drinks/index'
+    @tab = @tab_item.tab
+    respond_to do |format|
+      if @tab_item.save
+        format.html { redirect_to tab_path(@tab) }
+        format.js { render :file => "/drinks/create.js.erb" }
+      else
+        @errors = ["There's been a problem"]
+        format.html { render '/drinks/index' }
+        format.js
+      end
     end
   end
 

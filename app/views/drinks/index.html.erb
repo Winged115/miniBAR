@@ -1,12 +1,13 @@
 <h3>Add drinks to tab</h3>
 <% @drinks.each do |drink| %>
   <ul>
-    <li><%= drink.drink_name %> : <%= drink.price %></li>
+    <li><%= drink.drink_name %> : <%= drink.price %>
 
-    <%= form_for @tab_item do |f| %>
+    <%= form_for @tab_item, remote: true do |f| %>
     <%= f.hidden_field :drink_id, value: drink.id %>
     <%= f.hidden_field :tab_id, value: @tab.id %>
-    <%= f.submit "add item" %>
+    <%= f.submit "+", :class => 'new-drink' %>
     <% end %>
+    </li>
   </ul>
 <% end %>
