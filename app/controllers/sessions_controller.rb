@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       session.destroy
       redirect_to new_session_path
     elsif @bar.find(session[:bar_id])
-      @bar.discoverable = false
+      @bar.update_attributes(discoverable: false)
       session.destroy
       redirect_to new_session_path
     end

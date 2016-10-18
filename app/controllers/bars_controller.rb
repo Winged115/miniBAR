@@ -94,7 +94,7 @@ class BarsController < ApplicationController
             :routing_number => params[:routing_number]
             },
             :tos_accepted => true,
-            :master_merchant_account_id => ENV['BT_MERCHANT_ID']
+            :master_merchant_account_id => 'minibar1234567890'
           }
           result = Braintree::MerchantAccount.create(
             merchant_account_params
@@ -102,7 +102,7 @@ class BarsController < ApplicationController
           if result.success?
             p result
             current_user.update_attributes(merchant_account_id: result.merchant_account.id)
-            redirect_to root_path
+            redirect_to bar_tabs_path(session[:bar_id])
           else
             p result.errors
             redirect_to root_path
