@@ -611,30 +611,4 @@ hr {
   border-top: 0;
   margin: 1.5em 0; }
 
-.boxes {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-  .boxes::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .boxes::after {
-    clear: both;
-    content: "";
-    display: block; }
-
-.box {
-  background: red;
-  height: 25%;
-  width: 25%;
-  margin: 20px;
-  float: left;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .box:last-child {
-    margin-right: 0; }
-
 /*# sourceMappingURL=app.css.map */
