@@ -10,7 +10,6 @@ $(function() {
     var $listItem = $(this).closest('li');
     console.log($listItem);
     $listItem.fadeOut("slow");
-    $listItem.remove();
   });
 
 })
