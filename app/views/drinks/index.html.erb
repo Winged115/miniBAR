@@ -1,13 +1,28 @@
 <h3>Add drinks to tab</h3>
-<% @drinks.each do |drink| %>
-  <ul>
-    <li><%= drink.drink_name %> : <%= drink.price %>
 
-    <%= form_for @tab_item, remote: true do |f| %>
-    <%= f.hidden_field :drink_id, value: drink.id %>
-    <%= f.hidden_field :tab_id, value: @tab.id %>
-    <%= f.submit "+", :class => 'new-drink' %>
-    <% end %>
-    </li>
-  </ul>
-<% end %>
+<%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
+  <table class="tables">
+    <thead>
+      <tr>
+        <th>Drink</th>
+        <th>Price</th>
+        <th>Add Item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @drinks.each do |drink| %>
+        <tr>
+          <td><%= drink.drink_name %></td>
+          <td><%= drink.price %></td>
+          <td>
+            <%= form_for @tab_item, remote: true do |f| %>
+              <%= f.hidden_field :drink_id, value: drink.id %>
+              <%= f.hidden_field :tab_id, value: @tab.id %>
+              <%= f.submit "+", :class => 'new-drink' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
