@@ -44,7 +44,7 @@ class TabsController < ApplicationController
       bar = Bar.find(@tab.bar_id)
       patron = Patron.find(@tab.patron_id)
       bt_customer = Braintree::Customer.find(patron.customer_id)
-      payment_method_token = bt_customer.customer.credit_cards[0].token
+      payment_method_token = bt_customer.credit_cards[0].token
       p bar
       p bar.merchant_account_id
       transaction_result = Braintree::Transaction.sale(
