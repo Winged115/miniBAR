@@ -9,5 +9,10 @@ $(function() {
     var $button = $(this);
 
   }
+  $('.expander-trigger').click(function(){
+    $(this).toggleClass("expander-hidden");
+  });
 
 })
+
+

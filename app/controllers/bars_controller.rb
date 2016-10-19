@@ -5,9 +5,9 @@ class BarsController < ApplicationController
     @patron = Patron.find(current_user.id)
     if params[:search]
       @active_bars = Bar.bar_search(params[:search])
-      @active_bars.where(discoverable: true)
+      @active_bars.where(discoverable: true).limit(10)
     else
-      @active_bars = Bar.where(discoverable: true)
+      @active_bars = Bar.where(discoverable: true).limit(10)
     end
     if request.xhr?
       render(json: @active_bars)

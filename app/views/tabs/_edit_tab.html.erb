@@ -1,0 +1,32 @@
+<%= image_tag("miniBARlogo.png", size: "50%") %>
+
+<span>Tab: 000<%= @tab.id %></span><br>
+<span>Total: </span><span>$</span><span id="total"><%= @tab.show_total %></span>
+
+<h4>Have a nice night <%= @tab.patron.first_name %>!</h4>
+
+<p>Don't forget to help the person that helped you, now go get an Uber!</p>
+
+<%= form_tag(tab_path(@tab), method: "put") do %>
+  <label>Tip Amount:</label>
+    <div class="tip-text">
+      <%= text_field_tag :tip, 0.00 %>
+    </div>
+  <%= submit_tag ("close tab") %>
+<% end %>
+<div class="button-group">
+  <label id="other">
+    <input type="radio" name="button-group" value="item" checked>
+    <span class="button-group-item">
+      Other</span>
+  </label>
+  <label id="twenty">
+    <input type="radio" name="button-group" value="other-item">
+    <span class="button-group-item">20%</span>
+  </label>
+  <label id="twenty-five">
+    <input type="radio" name="button-group" value="other-item">
+    <span class="button-group-item">25%</span>
+  </label>
+</div>
+
