@@ -1,4 +1,7 @@
+
 <h1>Active Watering Holes</h1>
+
+ <div id="map"></div>
 
 <%= form_tag(bars_path, method: "get") do %>
   <%= label_tag(:q, "Search by zip code:") %>
@@ -21,6 +24,8 @@
         <%= f.submit "Open Tab" %>
         <% end %>
     </li><br>
-
   <% end %>
 </ul>
+
+</body>
+</html>
