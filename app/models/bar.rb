@@ -12,6 +12,13 @@ class Bar < ActiveRecord::Base
 
   validate :patron_email_nonexistent
 
+  geocoded_by :current_address
+  after_validation :geocode, :if => :address_changed?
+
+  def current_address
+    [address, city, zipcode].compact.join(', ')
+  end
+
   def patron_email_nonexistent
     if Patron.find_by(email: self.email)
       errors.add :email, "is taken"
