@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  $("form").on("submit", function () {
+  $("#patron-drink-show").on("submit", "form", function () {
     console.log("logged");
     console.log($(this));
     $(this).find('.new-drink').css("background-color", "red");

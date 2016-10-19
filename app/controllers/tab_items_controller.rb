@@ -3,6 +3,8 @@ class TabItemsController < ApplicationController
   def create
     @tab_item = TabItem.new(tab_item_params)
     @tab = @tab_item.tab
+    p params
+    p @tab_item
     respond_to do |format|
       if @tab_item.save
         format.html { redirect_to tab_path(@tab) }

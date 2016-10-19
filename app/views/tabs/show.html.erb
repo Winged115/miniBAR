@@ -8,11 +8,12 @@
 
 <% if session[:bar_id] %>
   <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
-  <ul>
+  <ul class="patron-drink-show">
     <% @tab.tab_items.each do |item| %>
       <li><%= item.drink.drink_name %> ~
         $ <%= item.drink.price %>
         <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
+        <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
       </li>
     <% end %>
   </ul>
