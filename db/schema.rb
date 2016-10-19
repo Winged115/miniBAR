@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20161017200015) do
     t.string   "city",                                null: false
     t.string   "state",                               null: false
     t.integer  "zipcode",                             null: false
+    t.float    "latitude"
+    t.float    "longitude"
     t.boolean  "discoverable",        default: false
     t.string   "password_digest",                     null: false
     t.datetime "created_at",                          null: false
