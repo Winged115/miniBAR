@@ -1,0 +1,5 @@
+<%= form_for tab_item, remote: true do |f| %>
+  <%= f.hidden_field :drink_id, value: drink.id %>
+  <%= f.hidden_field :tab_id, value: tab.id %>
+  <%= f.submit "+", :class => 'new-drink' %>
+<% end %>

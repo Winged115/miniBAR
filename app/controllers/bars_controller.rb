@@ -35,18 +35,31 @@ class BarsController < ApplicationController
 
   def update
     @bar = Bar.find(params[:id])
+    p params
     if params[:bar][:close_all]
       @bar.close_all_tabs
-      redirect_to settings_path(@bar)
-      flash[:success] = "All tabs have been closed"
-    elsif params[:bar][:discoverable]
+      # flash[:success] = "All tabs have been closed"
+      respond_to do |format|
+        format.html { redirect_to settings_path(@bar) }
+        format.js
+      end
+    elsif params[:bar][:update_discoverable]
+      # p params
       toggle_discoverable(@bar)
+      respond_to do |format|
+        format.html { redirect_to settings_path(@bar) }
+        format.js { render :discoverable }
+      end
     else
     end
   end
 
   def settings
     @bar = Bar.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create_bt_merchant
@@ -119,8 +132,11 @@ class BarsController < ApplicationController
 
 
   def toggle_discoverable(bar)
-    bar.update_attributes(discoverable: params[:bar][:discoverable])
-    redirect_to settings_path(@bar)
+    if bar.discoverable == true
+      bar.update_attributes(discoverable: false)
+    elsif bar.discoverable == false
+      bar.update_attributes(discoverable: true)
+    end
   end
 
 

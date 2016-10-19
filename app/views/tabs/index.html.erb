@@ -3,13 +3,15 @@
 
 
 <% if @tabs %>
-  <ul id="tabs-list">
-    <% @tabs.each do |tab| %>
-      <h3>
-          <%= link_to tab.patron.full_name, tab_path(tab), :method => :get %><br>
-      </h3>
+  <% @tabs.each do |tab| %>
+
+  <div class="grid-items">
+    <%= link_to tab_path(tab), :method => :get, :class => "grid-item" do %>
+      <h1><%= tab.patron.full_name %></h1>
+      <p>$<%= tab.total_amount %></p>
     <% end %>
-  </ul>
+  <% end %>
 <% else %>
   <h3>All tabs have been closed</h3>
 <% end %>
+</div>
