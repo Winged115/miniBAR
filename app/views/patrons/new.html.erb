@@ -12,3 +12,5 @@
 <p><%= f.password_field :password, placeholder: "Password" %></p>
 <%= f.submit "Get To Drinkin!" %>
 <% end %>
+
+<%= render partial: "/bars/bar_registration", locals: { bar: @bar, errors: @errors } %>
