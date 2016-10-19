@@ -7,6 +7,7 @@ gem 'rails', '5.0.0'
 gem 'pg', '~> 0.15'
 gem 'sidekiq'
 gem 'puma'
+gem 'redis'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
