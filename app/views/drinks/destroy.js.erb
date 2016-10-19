@@ -1,0 +1,4 @@
+console.log("drink removed")
+
+$('.tab-total').text('Total: $' + <%= @tab.total_owed.to_f %> + '0')
+$('a[href="/tab_items/<%=  @tab_item.id %>"').closest('li').remove();
