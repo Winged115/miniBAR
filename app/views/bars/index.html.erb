@@ -1,26 +1,25 @@
 <h1>Active Watering Holes</h1>
 
-<%= form_tag(bars_path, method: "get") do %>
-  <%= label_tag(:q, "Search by zip code:") %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
+<%= form_tag(bars_path, method: "get", :id => "bar-search-bar") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search bars by zip code" %>
+  <%= submit_tag "Search", :name => nil, :id => "bar-search-button" %>
 <% end %>
 
- <%= form_tag(bars_path, method: "get") do %>
-    <%= submit_tag "Refresh", :name => nil %>
-  <% end %>
 
-<ul id="bar-list">
-
-  <% @active_bars.each do |bar| %>
-    <li>
+<% @active_bars.each do |bar| %>
+  <div class="expander">
+    <a href="javascript:void(0)" class="expander-trigger expander-hidden"><%= bar.name %></a>
+    <div class="expander-content">
       <%= form_for ([@patron,@tab]), {action: "create"} do |f| %>
-        <%= link_to bar.name, patron_tabs_path(@patron, @tab), :method => :post %><br>
+        <h10><%= bar.address %></h10><br>
         <%= f.hidden_field :bar_id, value: bar.id %>
         <%= f.hidden_field :patron_id, value: session[:patron_id] %>
         <%= f.submit "Open Tab" %>
-        <% end %>
-    </li><br>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 
-  <% end %>
-</ul>
+<%= form_tag(bars_path, method: "get", :id => "refresh-button")  do %>
+  <%= submit_tag "Refresh", :name => nil %>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017200015) do
+ActiveRecord::Schema.define(version: 20161017171124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20161017200015) do
     t.string   "state",                               null: false
     t.integer  "zipcode",                             null: false
     t.boolean  "discoverable",        default: false
+    t.string   "merchant_account_id"
     t.string   "password_digest",                     null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "merchant_account_id"
   end
 
   create_table "drinks", force: :cascade do |t|

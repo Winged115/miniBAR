@@ -1,0 +1,10 @@
+<h1>Edit Settings For <%= bar.name %></h1>
+
+<label>Close All Open Tabs</label>
+<button><%= link_to "Close All Open Tabs", bar_path(bar, bar: {close_all: true}, data: :success, :format => :js), :class => "close-all", remote: true, :method => :put %></button>
+
+<p>By hitting "close all open tabs", you'll be closing all active tabs.</p>
+<p>If you aren't tired, wasted, and closed for the night, and this isn't what you'd like to do, don't.</p>
+
+<label>Set Discoverable</label>
+<button><%= link_to "Discoverable on", bar_path(bar, bar: {update_discoverable: true}, :format => :js), :class => "discoverable", remote: true, :method => :put %></button>

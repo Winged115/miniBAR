@@ -4,9 +4,9 @@ class BarsController < ApplicationController
     @tab = Tab.new
     @patron = Patron.find(current_user.id)
     if params[:search]
-      @active_bars = Bar.bar_search(params[:search])
+      @active_bars = Bar.bar_search(params[:search]).limit(10)
     else
-      @active_bars = Bar.all
+      @active_bars = Bar.all.limit(10)
     end
   end
 
