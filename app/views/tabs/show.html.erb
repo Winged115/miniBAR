@@ -29,7 +29,20 @@
   <% end %>
 
 <% if session[:patron_id] %>
-  <button><%= link_to "close tab", edit_tab_path(@tab) %></button>
+  <div class="modal">
+    <label for="modal-1">
+      <div class="modal-trigger">Close tab</div>
+    </label>
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-fade-screen">
+      <div class="modal-inner">
+        <div class="modal-close" for="modal-1"></div>
+        <h1>Add Your Tip</h1>
+        <%= render partial: "edit_tab", locals: { tab: @tab } %>
+      </div>
+    </div>
+  </div>
 <% elsif session[:bar_id] %>
   <button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
 <% end %>
+
