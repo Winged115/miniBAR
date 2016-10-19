@@ -1,4 +1,5 @@
 <h3>Add drinks to tab</h3>
+
 <%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
   <table class="tables">
     <thead>
@@ -11,16 +12,13 @@
     <tbody>
       <% @drinks.each do |drink| %>
         <tr>
-          <td><%= drink.drink_name %></td>
-          <td><%= drink.price %></td>
+          <td class="drink-name"><%= drink.drink_name %></td>
+          <td class="drink-price"><%= drink.price %></td>
           <td>
-            <%= form_for @tab_item do |f| %>
-              <%= f.hidden_field :drink_id, value: drink.id %>
-              <%= f.hidden_field :tab_id, value: @tab.id %>
-              <%= f.submit "add item" %>
-            <% end %>
+            <%= render partial: "new_drink", locals: { tab: @tab, tab_item: @tab_item, drink: drink } %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
+
