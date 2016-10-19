@@ -1,6 +1,7 @@
 
 <h1>Active Watering Holes</h1>
 
+<div id="map"></div>
 
 <%= form_tag(bars_path, method: "get", :id => "bar-search-bar") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search bars by zip code" %>
