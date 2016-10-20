@@ -48,41 +48,39 @@
 
 
 <% if session[:bar_id] %>
-  <button><%= link_to "Add Item", tab_drinks_path(@tab) %></button>
-<div class="modal">
-  <label for="modal-2">
-    <div class="modal-trigger">Add Item</div>
-  </label>
-  <input class="modal-state" id="modal-2" type="checkbox" />
-  <div class="modal-fade-screen">
-    <div class="modal-inner">
-      <div class="modal-close" for="modal-2"></div>
-<h3>Add drinks to tab</h3>
-
-<%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
-  <table class="tables">
-    <thead>
-      <tr>
-        <th>Drink</th>
-        <th>Price</th>
-        <th>Add Item</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @drinks.each do |drink| %>
-        <tr>
-          <td class="drink-name"><%= drink.drink_name %></td>
-          <td class="drink-price"><%= drink.price %></td>
-          <td>
-            <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: @tab_item, drink: drink } %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <div class="modal">
+    <label for="modal-2">
+      <div class="modal-trigger">Add Item</div>
+    </label>
+    <input class="modal-state" id="modal-2" type="checkbox" />
+    <div class="modal-fade-screen">
+      <div class="modal-inner">
+        <div class="modal-close" for="modal-2"></div>
+          <h3>Add drinks to tab</h3>
+          <%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
+          <table class="tables">
+            <thead>
+              <tr>
+                <th>Drink</th>
+                <th>Price</th>
+                <th>Add Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @drinks.each do |drink| %>
+                <tr>
+                  <td class="drink-name"><%= drink.drink_name %></td>
+                  <td class="drink-price"><%= drink.price %></td>
+                  <td>
+                    <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: @tab_item, drink: drink } %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 <% end %>
 
 
