@@ -1,7 +1,9 @@
 // Breakpoints
+$mobile-screen:270px;
 $medium-screen: 600px;
 $large-screen: 900px;
 
+$mobile: new-breakpoint(min-width $mobile-screen);
 // Typography
 $sans-serif: $lato, arial, sans-serif;
 $serif: $georgia;
