@@ -2,6 +2,7 @@ class PatronsController < ApplicationController
 
   def new
     @patron = Patron.new
+    @bar = Bar.new
   end
 
   def create

@@ -1,14 +1,27 @@
-<h2> Register as a Patron </h2>
+<h2>Register For miniBAR</h2>
 
+<ul class="accordion-tabs">
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="is-active tab-link">As A Patron</a>
+    <div class="tab-content">
+      <% if @errors %>
+        <%= render partial: "partials/errors", locals: { errors: @errors } %>
+      <% end %>
 
-<% if @errors %>
-  <%= render partial: "partials/errors", locals: { errors: @errors } %>
-<% end %>
+      <%= form_for @patron do |f| %>
+      <p><%= f.text_field :first_name, placeholder: "First" %></p>
+      <p><%= f.text_field :last_name, placeholder: "Last" %></p>
+      <p><%= f.email_field :email, placeholder: "Email" %></p>
+      <p><%= f.password_field :password, placeholder: "Password" %></p>
+      <%= f.submit "Get To Drinkin!" %>
+      <% end %>
+    </div>
+  </li>
+  <li class="tab-header-and-content">
+    <a href="javascript:void(0)" class="tab-link">As A Bar</a>
+    <div class="tab-content">
+      <%= render partial: "/bars/bar_registration", locals: { bar: @bar, errors: @errors } %>
+    </div>
+  </li>
+</ul>
 
-<%= form_for @patron do |f| %>
-<p><%= f.text_field :first_name, placeholder: "First" %></p>
-<p><%= f.text_field :last_name, placeholder: "Last" %></p>
-<p><%= f.email_field :email, placeholder: "Email" %></p>
-<p><%= f.password_field :password, placeholder: "Password" %></p>
-<%= f.submit "Get To Drinkin!" %>
-<% end %>

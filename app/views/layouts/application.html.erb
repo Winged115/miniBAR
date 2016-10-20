@@ -2,14 +2,36 @@
 <html>
 <head>
   <title>MiniBAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABy05NKzbTWvAANVxZzyBtRPcWxQhS8vs&callback=initMap"
+    async defer></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= action_cable_meta_tag %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <%= image_tag("miniBARlogo.png", size: "125x150") %>
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+             <%= image_tag("miniBARlogo.png") %>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <%= yield %>
 
 </body>
 </html>
+

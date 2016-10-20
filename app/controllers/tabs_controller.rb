@@ -4,6 +4,8 @@ class TabsController < ApplicationController
 
   def show
     @tab = Tab.find(params[:id])
+    @drinks = Drink.all
+    @tab_item = TabItem.new
   end
 
   def new
@@ -18,7 +20,7 @@ class TabsController < ApplicationController
     @tab = Tab.find(params[:id])
     if @tab && session[:patron_id]
       @tab.closed = true
-      @tab.total_amount = @tab.total_amount + params[:tip].to_f
+      @tab.total_amount = @tab.show_total + params[:tip].to_f
       @tab.save
       # bar = Bar.find(@tab.bar_id)
       # p bar
@@ -39,7 +41,7 @@ class TabsController < ApplicationController
       redirect_to bars_path
     elsif @tab && session[:bar_id]
       @tab.closed = true
-      @tab.total_amount = (@tab.total_owed * 1.25)
+      @tab.total_amount = (@tab.show_total * 1.25)
       @tab.save
       bar = Bar.find(@tab.bar_id)
       patron = Patron.find(@tab.patron_id)

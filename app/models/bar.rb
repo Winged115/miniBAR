@@ -12,6 +12,13 @@ class Bar < ActiveRecord::Base
 
   validate :patron_email_nonexistent
 
+  geocoded_by :current_address
+  after_validation :geocode, :if => :address_changed?
+
+  def current_address
+    [address, city, zipcode].compact.join(', ')
+  end
+
   def patron_email_nonexistent
     if Patron.find_by(email: self.email)
       errors.add :email, "is taken"
@@ -20,11 +27,7 @@ class Bar < ActiveRecord::Base
 
   def self.bar_search(criteria)
     close_bars = self.where("zipcode = ?", criteria)
-    puts "close_bars"
-    p close_bars
     close_active_bars = close_bars.active_bars
-    puts "close_active_bars"
-    p close_active_bars
   end
 
   def self.active_bars
@@ -35,8 +38,7 @@ class Bar < ActiveRecord::Base
   def close_all_tabs
     open_tabs = tabs.where(closed: false)
     open_tabs.each do |tab|
-      tab.closed = true
-      tab.save
+      tab.update_attributes(closed: true)
     end
   end
 
