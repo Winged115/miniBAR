@@ -78,12 +78,6 @@ RSpec.describe Bar, type: :model do
       expect(Bar.last.name).to eq("Bar1")
     end
 
-    it "is invalid without email" do
-      @new_bar.email = nil
-      @new_bar.save
-      expect(Bar.last.name).to eq("Bar1")
-    end
-
     it "is invalid without city" do
       @new_bar.city = nil
       @new_bar.save

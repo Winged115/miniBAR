@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Patron, type: :model do
-  let(:patron) { Patron.create!(email: "Patron1@gmail.com", first_name: "Patron", last_name: "One", password: "password1") }
 
   describe "attributes" do
+    let(:patron) { Patron.create!(email: "Patron@gmail.com", first_name: "Patron", last_name: "One", password: "password1") }
 
     it "has a first_name" do
       expect(patron.first_name).to eq "Patron"
@@ -14,7 +14,7 @@ RSpec.describe Patron, type: :model do
     end
 
     it "has an email" do
-      expect(patron.email).to eq "Patron1@gmail.com"
+      expect(patron.email).to eq "Patron@gmail.com"
     end
 
     it "has a hashed password" do
@@ -23,30 +23,52 @@ RSpec.describe Patron, type: :model do
 
   end
 
-  # describe "validations" do
-  #   it "is valid when it's rock" do
-  #     game.user_throw = 'rock'
-  #     game.valid?
-  #     expect(game.errors[:user_throw]).to be_empty
-  #   end
+  describe "validations" do
 
-  #   it "is valid when it's paper" do
-  #     game.user_throw = 'paper'
-  #     game.valid?
-  #     expect(game.errors[:user_throw]).to be_empty
-  #   end
+    before(:each) do
+      Patron.create!(email: "Patron@gmail.com", first_name: "Patron", last_name: "Patron", password: "password1")
+      @new_patron = Patron.new(email: "Mister@gmail.com", first_name: "Mister", last_name: "Mister", password: "password1")
+    end
 
-  #   it "is valid when it's scissors" do
-  #     game.user_throw = 'scissors'
-  #     game.valid?
-  #     expect(game.errors[:user_throw]).to be_empty
-  #   end
+    it "is invalid without a first name" do
+      @new_patron.first_name = nil
+      @new_patron.save
+      expect(Patron.last.first_name).to eq("Patron")
+    end
 
-  #   it "is NOT valid when it's pineapple" do
-  #     game.user_throw = 'pineapple'
-  #     game.valid?
-  #     expect(game.errors[:user_throw]).to_not be_empty
-  #   end
-  # end
+    it "is invalid without a last name" do
+      @new_patron.last_name = nil
+      @new_patron.save
+      expect(Patron.last.last_name).to eq("Patron")
+    end
+
+    it "is invalid without email" do
+      @new_patron.email = nil
+      @new_patron.save
+      expect(Patron.last.email).to eq("Patron@gmail.com")
+    end
+
+    it "is invalid without password" do
+      @new_patron.password = nil
+      @new_patron.save
+      expect(Patron.last.last_name).to eq("Patron")
+    end
+
+    it "is invalid if bar has same email" do
+      Bar.create(email: "Bar1@gmail.com", name: "Bar1", password: "password1", address: "1234 Bar Way", city: "Chicago", state: "IL", zipcode: "60625")
+      Patron.create(first_name: "Dave", last_name: "Noble", email: "Bar1@gmail.com", password: "password1")
+      expect(Patron.last.last_name).to eq("Patron")
+    end
+
+  end
+
+  describe "virtual attributes" do
+    let(:patron) { Patron.create!(email: "Patron@gmail.com", first_name: "Patron", last_name: "One", password: "password1") }
+
+    it "displays a full name by combining first name and last name" do
+      expect(patron.full_name).to eq("Patron One")
+    end
+
+  end
 
 end
