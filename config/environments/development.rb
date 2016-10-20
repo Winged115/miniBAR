@@ -35,6 +35,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+  config.action_cable.url = "ws://localhost:3000/cable"
 
 
   # Raises error for missing translations

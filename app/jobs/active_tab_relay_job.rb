@@ -1,6 +1,6 @@
 class ActiveTabRelayJob < ApplicationJob
-  def perform(tab)
-    ActionCable.server.broadcast("active_tabs_#{tab.id}",
-    	tab_id: '#{tab.id}')
+  def perform(bar)
+    ActionCable.server.broadcast 'bars:#{bar.id}:active_tabs',
+    	tabs: '#{bar.tabs}'
     end
 end
