@@ -17,19 +17,18 @@ ActiveRecord::Schema.define(version: 20161017171124) do
   enable_extension "plpgsql"
 
   create_table "bars", force: :cascade do |t|
-    t.string   "name",                                null: false
-    t.string   "email",                               null: false
-    t.string   "address",                             null: false
-    t.string   "city",                                null: false
-    t.string   "state",                               null: false
-    t.integer  "zipcode",                             null: false
+    t.string   "name",                            null: false
+    t.string   "email",                           null: false
+    t.string   "address",                         null: false
+    t.string   "city",                            null: false
+    t.string   "state",                           null: false
+    t.integer  "zipcode",                         null: false
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "discoverable",        default: false
-    t.string   "merchant_account_id"
-    t.string   "password_digest",                     null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.boolean  "discoverable",    default: false
+    t.string   "password_digest",                 null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "drinks", force: :cascade do |t|
