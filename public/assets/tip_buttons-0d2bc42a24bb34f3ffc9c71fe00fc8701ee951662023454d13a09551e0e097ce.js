@@ -1,0 +1,1 @@
+$(document).on("turbolinks:load",function(){var t=$("#total").html();$("#twenty").on("click",function(){var n=Math.round(.2*t*100)/100;$("#tip").val(n)}),$("#twenty-five").on("click",function(){var n=Math.round(.25*t*100)/100;$("#tip").val(n)}),$("#other").on("click",function(){$("#tip").val("0.00")})});

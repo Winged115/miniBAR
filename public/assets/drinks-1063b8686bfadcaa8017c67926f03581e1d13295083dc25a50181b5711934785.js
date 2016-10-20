@@ -1,0 +1,1 @@
+$(document).on("turbolinks:load",function(){$("#patron-drink-show").on("submit","form",function(){console.log("logged"),console.log($(this)),$(this).find(".new-drink").css("background-color","red")}),$("ul").on("click","#remove-drink",function(){console.log("logged");var o=$(this).closest("li");console.log(o),o.fadeOut("slow")})});
