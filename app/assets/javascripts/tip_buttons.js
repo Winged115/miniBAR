@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  var total = $("#total").html();
+  var total = $("#total").text();
   $("#twenty").on("click", function() {
     var twenty = Math.round(total * 0.20 * 100) / 100
     $("#tip").val(twenty);
