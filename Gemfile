@@ -28,6 +28,8 @@ gem 'geocoder'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 
+gem 'simplecov', :require => false, :group => :test
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
