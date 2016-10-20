@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :bars, except: [:destroy, :show] do
     resources :tabs, only: [:index]
   end
+  resources :welcome, only: [:show, :index]
+
   get '/patrons/payment_method' => 'patrons#payment_method'
   post '/patrons/create_bt_customer' => 'patrons#create_bt_customer'
   get '/bars/merchant_account' => 'bars#merchant_account'
