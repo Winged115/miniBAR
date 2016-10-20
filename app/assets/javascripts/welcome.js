@@ -1,17 +1,16 @@
 $(document).on('turbolinks:load', function() {
-  $("header").hide()
-    //$(".link-to-home").hide()
-    // var a = $(".link-to-home").children();
-    $(".link-to-home").delay(10000).queue(function(){
+  $(".link-to-home").hide();
+  //$("header").delay(10000).show(0);
+  $(".link-to-home").delay(10000).queue(function(){
       document.getElementById("home").click();
     });
     $('.pour') //miniBAR
       .delay(2000)
       .animate({
-        height: '370px'
+        height: '330px'
         }, 1500)
       .delay(2600)
-      .slideUp(500);
+      .slideUp(350);
 
     $('#liquid') // I Said Fill 'Er Up!
       .delay(3400)

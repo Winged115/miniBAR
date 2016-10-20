@@ -1,6 +1,6 @@
 body { background-color: black }
 
-h2 {
+.drunk {
   margin: 0 auto;
   width: 400px;
   font-size: 36px;
@@ -22,6 +22,7 @@ h2 {
 
 .pour {
   position: absolute;
+  margin-top: 27px;
   left: 45%;
   width: 20px;
   height: 0px;
