@@ -22,7 +22,7 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: #45494D;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 
@@ -30,6 +30,7 @@ a {
   &:focus,
   &:hover {
     color: shade($action-color, 25%);
+    color: #fff;
   }
 }
 

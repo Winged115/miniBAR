@@ -1,10 +1,15 @@
-<h1>Edit Settings</h1>
+<h1 id="settings-header">Edit Settings</h1>
 
+<div id="discoverable-container">
+  <button><%= link_to "Discoverable on", bar_path(@bar, bar: {update_discoverable: true}, :format => :js), id: "discoverable", remote: true, :method => :put %></button>
+</div>
 
-<button><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success, :format => :js), id: "close-all", remote: true, :method => :put %></button>
+<section id="close-tabs-container">
+  <p>By hitting "Close All Open Tabs", you'll be closing <strong>ALL ACTIVE TABS</strong>.</p>
+  <p>If you aren't tired, wasted, and closed for the night, and this isn't what you'd like to do, don't.</p>
+  <br>
 
-<p>By hitting "close all open tabs", you'll be closing all active tabs.</p>
-<p>If you aren't tired, wasted, and closed for the night, and this isn't what you'd like to do, don't.</p>
+  <button><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success, :format => :js), id: "close-all", remote: true, :method => :put %></button>
 
-
-<button><%= link_to "Discoverable on", bar_path(@bar, bar: {update_discoverable: true}, :format => :js), id: "discoverable", remote: true, :method => :put %></button>
+  <div id="open-tabs-link"><%= link_to "Or go back to open tabs", bar_path(@bar) %></div>
+</section>
