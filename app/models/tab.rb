@@ -3,8 +3,8 @@ class Tab < ActiveRecord::Base
   belongs_to :patron
   has_many :tab_items
   has_many :drinks, through: :tab_items
-  after_update { ActiveTabRelayJob.perform_now(self.bar)  }
-
+  # after_commit { ActiveTabRelayJob.perform_now(self.bar)  }
+  after_commit { ActiveTabsChannel.broadcast_to(self.bar, tabs: self.bar.tabs) }
   def total_owed
     drinks.inject (0) {|sum, drink| sum + drink.price}
   end

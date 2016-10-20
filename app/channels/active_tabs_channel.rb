@@ -1,7 +1,7 @@
 class ActiveTabsChannel < ApplicationCable::Channel
   def subscribed
     # if current_user.class == Bar
-    	stream_from "bars:#{current_user.id}:active_tabs"
+    	stream_for current_user
   	# end
   end
 
