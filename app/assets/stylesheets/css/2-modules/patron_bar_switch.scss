@@ -12,7 +12,7 @@
   $tab-active-background: $tab-content-background;
   $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
-  $tab-mode: $medium-screen;
+  $tab-mode: $mobile-screen;
 
   @include clearfix;
   line-height: 1.5;
@@ -22,6 +22,12 @@
   @include media(max-width $tab-mode) {
     border: $tab-border;
     border-radius: $base-border-radius;
+  }
+
+  @include media(min-width $mobile-screen) {
+    body {
+      background: purple;
+    }
   }
 
   .tab-header-and-content {
@@ -64,9 +70,6 @@
       @include border-top-radius($base-border-radius);
       border-top: 0;
       display: inline-block;
-    }
-    @include media(min-width 240px max-width 480px, 6) {
-      @include span-columns(6);
     }
 
     &:hover {
