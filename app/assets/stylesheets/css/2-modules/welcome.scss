@@ -34,7 +34,7 @@ h2 {
   border-top: 0;
   border-radius: 0 0 30px 30px;
   height: 200px;
-  left: 14px;
+  left: 20px;
   bottom: 0;
   width: 200px;
 }
@@ -47,12 +47,12 @@ h2 {
   content: '';
   height: 30px;
   position: absolute;
-  top: -40px;
+  top: -30px;
   width: 30px;
 }
 
-#beaker:before { left: -50px; }
-#beaker:after { right: -50px; }
+#beaker:before { left: -30px; }
+#beaker:after { right: -30px; }
 
 #liquid {
   background-color: #edaf32;
@@ -143,7 +143,7 @@ h2 {
   float: left;
   position: absolute;
   z-index: 999;
-  width: 50px;
+  width: 40px;
   height: 50px;
   border-radius: 30px;
   background-color: #fefefe;
@@ -154,27 +154,27 @@ h2 {
 }
 .foam-2 {
   top: -35px;
-  left: 20px;
+  left: 10px;
 }
 .foam-3 {
   top: -25px;
-  left: 50px;
+  left: 40px;
 }
 .foam-4 {
   top: -35px;
-  left: 80px;
+  left: 70px;
 }
 .foam-5 {
   top: -30px;
-  left: 110px;
+  left: 100px;
 }
 .foam-6 {
   top: -20px;
-  left: 140px;
+  left: 130px;
 }
 .foam-7 {
   top: -30px;
-  left: 160px;
+  left: 150px;
 }
 
 /* Drunk Text */
@@ -188,16 +188,16 @@ h2 {
      -moz-animation-duration:5s;
           animation-duration:5s;
 
-  -webkit-animation-delay:3.5s;
-     -moz-animation-delay:3.5s;
-          animation-delay:3.5s;
+  -webkit-animation-delay:4.5s;
+     -moz-animation-delay:4.5s;
+          animation-delay:4.5s;
 }
 
 
 .animated.drunk {
-  -webkit-animation-duration:2s;
-     -moz-animation-duration:2s;
-          animation-duration:2s;
+  -webkit-animation-duration:4s;
+     -moz-animation-duration:4s;
+          animation-duration:4s;
 }
 
 @-webkit-keyframes drunk {

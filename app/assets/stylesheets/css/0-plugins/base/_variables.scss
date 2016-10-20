@@ -5,7 +5,7 @@ $large-screen: 900px;
 
 $mobile: new-breakpoint(min-width $mobile-screen);
 // Typography
-$sans-serif: $lato, arial, sans-serif;
+$sans-serif: $helvetica;
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
