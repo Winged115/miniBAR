@@ -4,6 +4,8 @@ class TabsController < ApplicationController
 
   def show
     @tab = Tab.find(params[:id])
+    @drinks = Drink.all
+    @tab_item = TabItem.new
   end
 
   def new
