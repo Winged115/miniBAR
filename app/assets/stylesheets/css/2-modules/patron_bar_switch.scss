@@ -65,6 +65,9 @@
       border-top: 0;
       display: inline-block;
     }
+    @include media(min-width 240px max-width 480px, 6) {
+      @include span-columns(6);
+    }
 
     &:hover {
       color: $action-color;
