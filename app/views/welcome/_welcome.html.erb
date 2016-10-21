@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>miniBAR</title>
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:700,900'>
+    <%= stylesheet_link_tag 'welcome.scss'%>
+   <!--  <link rel="stylesheet" src="/welcome.css"> -->
+  </head>
+
+  <body>
+  <div id="full-wrapper">
+    <div id="container">
+  <div class="pour"></div>
+  <div id="beaker">
+    <div class="beer-foam">
+      <div class="foam-1"></div>
+      <div class="foam-2"></div>
+      <div class="foam-3"></div>
+      <div class="foam-4"></div>
+      <div class="foam-5"></div>
+      <div class="foam-6"></div>
+      <div class="foam-7"></div>
+    </div>
+
+    <div id="liquid">
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+      <div class="bubble bubble5"></div>
+    </div>
+  </div>
+</div>
+
+<h2 class="animated drunk"><%= image_tag("testLOGO.gif")  %></h2>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+   <%= javascript_include_tag "welcome.js" %>
+
+   <div class="link-to-home"> <%= link_to "home", new_patron_path, :id => "home" %>
+    </div>
+  </div>
+  </body>
+
+</html>
