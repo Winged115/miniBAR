@@ -1,0 +1,1 @@
+$(document).on("turbolinks:load",function(){$(".link-to-home").hide(),$(".link-to-home").delay(1e4).queue(function(){document.getElementById("home").click()}),$(".pour").delay(2e3).animate({height:"330px"},1500).delay(2600).slideUp(350),$("#liquid").delay(3400).animate({height:"200px"},2500),$(".beer-foam").delay(3400).animate({bottom:"210px"},2500)});
