@@ -111,6 +111,28 @@
       text-transform: capitalize;
     }
 
+    #logo-image-tip-modal {
+      margin-top: 15%;
+      margin-bottom: 15%;
+    }
+
+    #tab-close-info {
+      margin-bottom: 5%;
+      border: 2px solid white;
+      padding: 10%;
+    }
+
+    #tab-info {
+      font-size: .75em;
+    }
+
+    #goodnight-text {
+      font-size: 1.5em;
+      margin-top: 10%;
+      border-top: 1px solid white;
+      padding-top : 5%
+    }
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;

@@ -1,19 +1,21 @@
-<%= image_tag("miniBARlogo.png", size: "50%") %>
+<div id="logo-image-tip-modal"><%= image_tag("miniBARlogo.png", size: "50%") %></div>
 
-<span>Tab: 000<%= @tab.id %></span><br>
-<span>Total: </span><span>$</span><span id="total"><%= @tab.show_total %></span>
+<div id="tab-close-info">
+  <span id="tab-info">TAB: 000<%= @tab.id %>  |  TOTAL: $ <%= @tab.show_total %></span>
 
-<h4>Have a nice night <%= @tab.patron.first_name %>!</h4>
+  <h2 id="goodnight-text">Have a nice night <%= @tab.patron.first_name %>!</h2>
 
-<p>Don't forget to help the person that helped you, now go get an Uber!</p>
+  <p>Don't forget to help the person that helped you, now go get an Uber!</p>
 
-<%= form_tag(tab_path(@tab), method: "put") do %>
-  <label>Tip Amount:</label>
-    <div class="tip-text">
-      <%= text_field_tag :tip, 0.00 %>
-    </div>
-  <%= submit_tag ("close tab") %>
-<% end %>
+  <%= form_tag(tab_path(@tab), method: "put") do %>
+    <label>Tip Amount:</label>
+      <div class="tip-text">
+        <%= text_field_tag :tip, 0.00 %>
+      </div>
+    <%= submit_tag ("close tab") %>
+  <% end %>
+</div>
+
 <div class="button-group">
   <label id="other">
     <input type="radio" name="button-group" value="item" checked>
