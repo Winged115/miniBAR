@@ -1,16 +1,20 @@
-<h1>Open Tabs</h1>
-<div class="tab-container">
-<% if @tabs %>
-  <% @tabs.each do |tab| %>
 
-  <div class="grid-items">
-    <%= link_to tab_path(tab), :method => :get, :class => "grid-item" do %>
-      <h1><%= tab.patron.full_name %></h1>
-      <p>$<%= tab.total_amount %></p>
-    <% end %>
+<h1 class="page-headline">Open Tabs</h1>
+
+<div id="tabs-container">
+  <% if @tabs %>
+    <div class="grid-items tab-buttons">
+      <% @tabs.each do |tab| %>
+
+        <%= link_to tab_path(tab), :method => :get, :class => "grid-item" do %>
+          <h2><%= tab.patron.full_name %></h2>
+          <h4>$<%= tab.show_total %></h4>
+        <% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <h3>There are currently no open tabs</h3>
   <% end %>
-<% else %>
-  <h3>All tabs have been closed</h3>
-<% end %>
 </div>
-</div>
+
+<div id="settings-button"><%= link_to "Settings", settings_path(@bar) %></div>

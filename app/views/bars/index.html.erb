@@ -3,10 +3,12 @@
 
 <div id="map"></div>
 
-<%= form_tag(bars_path, method: "get", :id => "bar-search-bar") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search bars by zip code" %>
-  <%= submit_tag "Search", :name => nil, :id => "bar-search-button" %>
-<% end %>
+<div id="bar-search-container">
+  <%= form_tag(bars_path, method: "get", :id => "bar-search-bar") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search bars by zip code" %>
+    <%= submit_tag "Search", :name => nil, :id => "bar-search-button" %>
+  <% end %>
+</div>
 
 
 <% @active_bars.each do |bar| %>
@@ -14,15 +16,19 @@
     <a href="javascript:void(0)" class="expander-trigger expander-hidden"><%= bar.name %></a>
     <div class="expander-content">
       <%= form_for ([@patron,@tab]), {action: "create"} do |f| %>
-        <h10><%= bar.address %></h10><br>
+        <div class="open-tab-form">
+        <p><%= bar.address %></p>
         <%= f.hidden_field :bar_id, value: bar.id %>
         <%= f.hidden_field :patron_id, value: session[:patron_id] %>
         <%= f.submit "Open Tab" %>
+      </div>
       <% end %>
     </div>
   </div>
 <% end %>
 
-<%= form_tag(bars_path, method: "get", :id => "refresh-button")  do %>
-  <%= submit_tag "Refresh", :name => nil %>
-<% end %>
+<div class="refresh-search-button">
+  <%= form_tag(bars_path, method: "get")  do %>
+    <%= submit_tag "Refresh", :name => nil %>
+  <% end %>
+</div>

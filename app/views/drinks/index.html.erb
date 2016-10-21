@@ -1,6 +1,6 @@
-<h3>Add drinks to tab</h3>
+<h3>Add Drinks</h3>
 
-<%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab) %>
+<%= link_to "Back to tab for " + @tab.patron.last_name, tab_path(@tab), id: "link-to-tab" %>
   <table class="tables">
     <thead>
       <tr>
