@@ -1,4 +1,4 @@
-<h1 id="settings-header">Edit Settings</h1>
+<h1 class="page-headline">Edit Settings</h1>
 
 <div id="discoverable-container">
   <button><%= link_to "Discoverable ON", bar_path(@bar, bar: {update_discoverable: true}, :format => :js), id: "discoverable", remote: true, :method => :put %></button>
@@ -13,5 +13,5 @@
 
   <button><%= link_to "Close All Open Tabs", bar_path(@bar, bar: {close_all: true}, data: :success, :format => :js), id: "close-all", remote: true, :method => :put %></button>
 
-  <div id="open-tabs-link"><%= link_to "Or go back to open tabs", bar_path(@bar) %></div>
+  <div id="open-tabs-link"><%= link_to "Or go back to open tabs", bar_tabs_path(@bar) %></div>
 </section>
