@@ -15,6 +15,7 @@
   $button-group-inner-border: 1px solid lighten(silver, 18%);
   $button-group-background-checked: $action-color;
   $button-group-color-checked: white;
+  padding: 5%;
   $button-group-border-checked: darken($button-group-background-checked, 15%);
 
   input {
@@ -23,13 +24,14 @@
 
   label {
     margin-bottom: 0;
+    text-align: center;
 
     @include media($large-screen) {
       float: left;
     }
 
     .button-group-item {
-      background: $button-group-background;
+      background: #cf94e0;
       border-left: $button-group-border;
       border-radius: 0;
       border-right: $button-group-border;
