@@ -6,17 +6,33 @@
 <h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
 <br>
 
-  <ul class="patron-drink-show">
-<% if session[:bar_id] %>
+<table class="table-minimal">
+  <thead>
+    <tr>
+      <th>Drinks</th>
+      <th>Price</th>
+      <th>Add or Remove</th>
+    </tr>
+  </thead>
+  <% if session[:bar_id] %>
     <% @tab.tab_items.each do |item| %>
-      <li><%= item.drink.drink_name %> ~
-        $ <%= item.drink.price %>
-        <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
-        <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
-      </li>
+      <tbody>
+        <tr>
+          <td><%= item.drink.drink_name %></td>
+          <td><%= item.drink.price %></td>
+          <td>
+            <button>
+              <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
+            </button>
+            <button>
+              <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
+            </button>
+          </td>
+        </tr>
+      </tbody>
     <% end %>
-  </ul>
-<% end %>
+  <% end %>
+</table>
 
 <% if session[:patron_id] %>
   <% @tab.tab_items.each do |item| %>
@@ -83,35 +99,4 @@
     </div>
 <% end %>
 
-<table class="table-minimal">
-  <thead>
-    <tr>
-      <th>Header Cell 1</th>
-      <th>Header Cell 2</th>
-      <th>Header Cell 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Row 1 Cell 1</td>
-      <td>Row 1 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 2 Cell 1</td>
-      <td>Row 2 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 3 Cell 1</td>
-      <td>Row 3 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 4 Cell 1</td>
-      <td>Row 4 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-  </tbody>
-</table>
 
