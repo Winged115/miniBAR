@@ -1,7 +1,9 @@
 <h1 id="settings-header">Edit Settings</h1>
 
 <div id="discoverable-container">
-  <button><%= link_to "Discoverable on", bar_path(@bar, bar: {update_discoverable: true}, :format => :js), id: "discoverable", remote: true, :method => :put %></button>
+  <button><%= link_to "Discoverable ON", bar_path(@bar, bar: {update_discoverable: true}, :format => :js), id: "discoverable", remote: true, :method => :put %></button>
+  <br>
+  <p>By clicking <strong>Discoverable ON</strong>, you'll be making this bar accessible in patron search results.</p>
 </div>
 
 <section id="close-tabs-container">
