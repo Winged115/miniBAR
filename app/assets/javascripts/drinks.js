@@ -5,11 +5,10 @@ $(document).on('turbolinks:load', function() {
     $(this).find('.new-drink').css("background-color", "red");
   });
 
-  $("ul").on("click", "#remove-drink", function () {
+  $(".patron-drink-show").on("click", ".remove-drink", function () {
     console.log("logged");
-    var $listItem = $(this).closest('li');
-    console.log($listItem);
-    $listItem.fadeOut("slow");
+    var $itemRow = $(this).closest('.tab-item');
+    $itemRow.slideUp();
   });
 
 })

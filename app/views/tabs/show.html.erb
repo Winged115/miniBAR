@@ -7,27 +7,6 @@
 <h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
 <br>
 
-  <ul class="patron-drink-show">
-<% if session[:bar_id] %>
-    <% @tab.tab_items.each do |item| %>
-      <li><%= item.drink.drink_name %> ~
-        $ <%= item.drink.price %>
-        <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
-        <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<% if session[:patron_id] %>
-  <% @tab.tab_items.each do |item| %>
-    <ul>
-      <li><%= item.drink.drink_name %> ~
-      $ <%= item.drink.price %></li>
-    </ul>
-<% end %>
-  <% end %>
-
 
 <% if session[:bar_id] %>
   <div class="modal patron-close-tab">
@@ -66,7 +45,7 @@
 <% end %>
 
 <% if session[:bar_id] %>
-  <table class="table-minimal">
+  <table class="table-minimal patron-drink-show">
     <thead>
       <tr>
         <th>Drinks</th>
@@ -74,9 +53,9 @@
         <th>Add or Remove</th>
       </tr>
     </thead>
-    <% @tab.tab_items.each do |item| %>
-      <tbody>
-        <tr>
+    <tbody>
+      <% @tab.tab_items.each do |item| %>
+        <tr class="tab-item">
           <td><%= item.drink.drink_name %></td>
           <td><%= item.drink.price %></td>
           <td>
@@ -84,12 +63,12 @@
               <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
             </button>
             <button>
-              <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
+              <%= link_to "remove", tab_item_path(item, :format => :js), class: "remove-drink", remote: true, :method => :delete %>
             </button>
           </td>
         </tr>
-      </tbody>
-    <% end %>
+      <% end %>
+    </tbody>
   </table>
 <% end %>
 
