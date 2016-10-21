@@ -2,7 +2,8 @@ $(document).on('turbolinks:load', function() {
   $(".link-to-home").hide();
   //$("header").delay(10000).show(0);
   $(".link-to-home").delay(10000).queue(function(){
-      document.getElementById("home").click();
+      // document.getElementById("home").click();
+      window.location.replace('http://localhost:3000/patrons/new')
     });
     $('.pour') //miniBAR
       .delay(2000)

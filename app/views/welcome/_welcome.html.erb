@@ -39,7 +39,7 @@
 
    <%= javascript_include_tag "welcome.js" %>
 
-   <div class="link-to-home"> <%= link_to "home", new_patron_path, :id => "home" %>
+   <div class="link-to-home"> <%= link_to "home", new_patron_path, :id => "home", data: { no_turbolink: true }%>
     </div>
   </div>
   </body>
