@@ -1,5 +1,5 @@
 <% if session[:bar_id] %>
-  <h2>Tab For: <%= @tab.patron.last_name %></h2>
+  <h1 class="page-headline">Tab For: <%= @tab.patron.last_name %></h1>
 <% elsif session[:patron_id] %>
   <h2><%= @tab.bar.name %></h2>
 <% end %>
