@@ -11,7 +11,11 @@ class Tab < ActiveRecord::Base
     end
 
     ActiveTabsChannel.broadcast_to(self.bar, tabs: active_tabs_hash)
-    TabTotalChannel.broadcast_to(self.patron, tab: self)
+    drinks_array = self.tab_items.map do |tab_item|
+      {drink_name: tab_item.drink.drink_name, price: tab_item.drink.price}
+    end
+    TabTotalChannel.broadcast_to(self.patron, tab: self, tab_items: drinks_array)
+
   end
   def total_owed
     drinks.inject (0) {|sum, drink| sum + drink.price}
