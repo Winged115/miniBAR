@@ -5,64 +5,6 @@
 <% end %>
 <h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
 <br>
-
-<table class="table-minimal">
-  <thead>
-    <tr>
-      <th>Drinks</th>
-      <th>Price</th>
-      <th>Add or Remove</th>
-    </tr>
-  </thead>
-  <% if session[:bar_id] %>
-    <% @tab.tab_items.each do |item| %>
-      <tbody>
-        <tr>
-          <td><%= item.drink.drink_name %></td>
-          <td><%= item.drink.price %></td>
-          <td>
-            <button>
-              <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
-            </button>
-            <button>
-              <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    <% end %>
-  <% end %>
-</table>
-
-<% if session[:patron_id] %>
-  <% @tab.tab_items.each do |item| %>
-    <ul>
-      <li><%= item.drink.drink_name %> ~
-      $ <%= item.drink.price %></li>
-    </ul>
-<% end %>
-  <% end %>
-
-<% if session[:patron_id] %>
-
-  <div class="modal">
-    <label for="modal-1">
-      <div class="modal-trigger">Close tab</div>
-    </label>
-    <input class="modal-state" id="modal-1" type="checkbox" />
-    <div class="modal-fade-screen">
-      <div class="modal-inner">
-        <div class="modal-close" for="modal-1"></div>
-        <h1>Add Your Tip</h1>
-        <%= render partial: "edit_tab", locals: { tab: @tab } %>
-      </div>
-    </div>
-  </div>
-<% elsif session[:bar_id] %>
-  <button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
-<% end %>
-
-
 <% if session[:bar_id] %>
   <div class="modal">
     <label for="modal-2">
@@ -98,5 +40,75 @@
       </div>
     </div>
 <% end %>
+
+<% if session[:bar_id] %>
+  <table class="table-minimal">
+    <thead>
+      <tr>
+        <th>Drinks</th>
+        <th>Price</th>
+        <th>Add or Remove</th>
+      </tr>
+    </thead>
+    <% @tab.tab_items.each do |item| %>
+      <tbody>
+        <tr>
+          <td><%= item.drink.drink_name %></td>
+          <td><%= item.drink.price %></td>
+          <td>
+            <button>
+              <%= render partial: "drinks/new_drink", locals: { tab: @tab, tab_item: create_new_tab_item, drink: item.drink } %>
+            </button>
+            <button>
+              <%= link_to "remove", tab_item_path(item, :format => :js), id: "remove-drink", remote: true, :method => :delete %>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>  
+  </table>
+<% end %>
+
+<% if session[:patron_id] %>
+
+  <div class="modal">
+    <label for="modal-1">
+      <div class="modal-trigger">Close tab</div>
+    </label>
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-fade-screen">
+      <div class="modal-inner">
+        <div class="modal-close" for="modal-1"></div>
+        <h1>Add Your Tip</h1>
+        <%= render partial: "edit_tab", locals: { tab: @tab } %>
+      </div>
+    </div>
+  </div>
+<% elsif session[:bar_id] %>
+  <button>
+    <%= link_to "close tab", tab_path(@tab), :method => :put %>
+  </button>
+<% end %>
+
+<% if session[:patron_id] %>
+  <table class="table-minimal">
+    <thead>
+      <tr>
+        <th>Drink</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <% @tab.tab_items.each do |item| %>
+      <tbody>
+        <tr>
+          <td><%= item.drink.drink_name %></td>
+          <td>$ <%= item.drink.price %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+<% end %>
+
+
 
 
