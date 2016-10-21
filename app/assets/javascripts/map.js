@@ -4,7 +4,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 41.876, lng: -87.653},
-    zoom: 14,
+    zoom: 16,
     styles: [
       {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -132,5 +132,5 @@ function setAllMarkers(barsArray) {
 
 
 $(document).on('turbolinks:load', function() {
-
+  initMap()
 })

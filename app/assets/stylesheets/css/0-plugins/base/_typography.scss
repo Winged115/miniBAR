@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: modular-scale(1);
+  font-size: modular-scale(3);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -22,7 +22,7 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: #fff;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 
@@ -30,6 +30,7 @@ a {
   &:focus,
   &:hover {
     color: shade($action-color, 25%);
+    color: #fff;
   }
 }
 
