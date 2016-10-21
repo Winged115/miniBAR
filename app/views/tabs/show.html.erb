@@ -1,5 +1,6 @@
 <% if session[:bar_id] %>
   <h1 class="page-headline">Tab For: <%= @tab.patron.last_name %></h1>
+  <%= link_to "Back to Tabs", bar_tabs_path(session[:bar_id]) %>
 <% elsif session[:patron_id] %>
   <h1><%= @tab.bar.name %></h1>
 <% end %>
