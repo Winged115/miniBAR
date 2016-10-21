@@ -1,7 +1,7 @@
 <% if session[:bar_id] %>
   <h1 class="page-headline">Tab For: <%= @tab.patron.last_name %></h1>
 <% elsif session[:patron_id] %>
-  <h2><%= @tab.bar.name %></h2>
+  <h1><%= @tab.bar.name %></h1>
 <% end %>
 <h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
 <br>
@@ -27,28 +27,9 @@
 <% end %>
   <% end %>
 
-<% if session[:patron_id] %>
-  </ul>
-  <div class="modal">
-    <label for="modal-1">
-      <div class="modal-trigger">Close tab</div>
-    </label>
-    <input class="modal-state" id="modal-1" type="checkbox" />
-    <div class="modal-fade-screen">
-      <div class="modal-inner">
-        <div class="modal-close" for="modal-1"></div>
-        <h1>Add Your Tip</h1>
-        <%= render partial: "edit_tab", locals: { tab: @tab } %>
-      </div>
-    </div>
-  </div>
-<% elsif session[:bar_id] %>
-  <button><%= link_to "close tab", tab_path(@tab), :method => :put %></button>
-<% end %>
-
 
 <% if session[:bar_id] %>
-  <div class="modal">
+  <div class="modal patron-close-tab">
     <label for="modal-2">
       <div class="modal-trigger">Add Item</div>
     </label>
