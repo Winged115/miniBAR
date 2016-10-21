@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'bars/:id/settings' => 'bars#settings', as: 'settings'
+  mount ActionCable.server => '/cable'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
+gem 'sidekiq'
+gem 'puma'
+gem 'redis'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

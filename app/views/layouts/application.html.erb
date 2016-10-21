@@ -8,6 +8,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABy05NKzbTWvAANVxZzyBtRPcWxQhS8vs&callback=initMap"
     async defer></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= action_cable_meta_tag %>
   <%= csrf_meta_tags %>
 </head>
 <body>
