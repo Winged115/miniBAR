@@ -1,12 +1,23 @@
-== README
+### About MiniBAR
 
-###Ruby version: ````2.2.2````
+MiniBAR was our eight-day capstone project collaboration for Dev Bootcamp. It was a consumer-focused RoR mobile-first web app with the following functionality:
+* 
+
+Technologies, languages, and API's include: 
+* Ruby on Rails
+* JQuery
+* Javascript
+* Bourbon SASS library
+* Google Maps API
+* Braintree API
+
+####Configuration
+
+Ruby version: ````2.2.2````
 
 * System dependencies
 
-* Configuration
-
-###Setup
+####Setup
 
 ````bundle install````
 
