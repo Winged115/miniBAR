@@ -16,9 +16,7 @@
 
 ````be rake db:seed````
 
-Database initialization
-
-###Setting Up Payment
+###Payment Environment
 
 Integration with the [Braintree Sandbox](https://sandbox.braintreegateway.com/login) allows us to process payments in a testing environment. For security purposes, environment variables are used. For full functionality of the app, create a .env file with your unique sandbox credentials.
 
