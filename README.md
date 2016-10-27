@@ -19,7 +19,7 @@ Ruby version: ````2.2.2````
 
 ####Setup
 
-To get started, run ````bundle install```` followed the three following rake processes:
+To get started, run ````bundle install```` followed by the three following rake setup commands:
 
 ````be rake db:create````
 
