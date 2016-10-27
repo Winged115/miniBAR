@@ -17,8 +17,6 @@ As a patron, users can search for bars by zip code and open a tab at a bar. Once
 
 Ruby version: ````2.2.2````
 
-* System dependencies
-
 ####Setup
 
 To get started, run ````bundle install```` followed the three following rake processes:
