@@ -19,9 +19,9 @@ Ruby version: ````2.2.2````
 
 ####Setup
 
-````bundle install````
+````bundle install
 
-````be rake db:create````
+be rake db:create````
 
 ````be rake db:migrate````
 
@@ -37,4 +37,5 @@ Integration with the [Braintree Sandbox](https://sandbox.braintreegateway.com/lo
 
 ### Running the Test Suite
 
+(Documentation upcoming)
 
