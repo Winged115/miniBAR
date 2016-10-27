@@ -1,7 +1,7 @@
 #MiniBAR
 
 ##Description
-MiniBAR is a consumer-focused RoR mobile-first web app that allows users to manage an active tab from their mobile device. 
+MiniBAR is a consumer-focused RoR mobile-first web app that allows users to open and manage an active tab from their mobile device. 
 
 ##Features
 Users can register as a Patron or Bar (including payment methods). 
