@@ -1,33 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-````Ruby version: 2.2.2````
+###Ruby version: ````2.2.2````
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+###Setup
 
-````bundle install
-be rake db:create
-be rake db:migrate
-be rake db:seed````
+````bundle install````
+````be rake db:create````
+````be rake db:migrate````
+````be rake db:seed````
 
 * Database initialization
 
-* How to run the test suite
+###Setting Up Payment
 
-* Services (job queues, cache servers, search engines, etc.)
+Integration with the [Braintree Sandbox](https://sandbox.braintreegateway.com/login) allows us to process payments in a testing environment. For security purposes, environment variables are used. For full functionality of the app, create a .env file with your unique sandbox credentials.
 
-* Deployment instructions
+####Adding Braintree Info
 
-* ...
+(Documentation upcoming)
+
+### Running the Test Suite
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
