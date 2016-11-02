@@ -63,5 +63,5 @@ Integration with the [Braintree Sandbox](https://sandbox.braintreegateway.com/lo
 (Documentation upcoming)
 
 ##The Team
-  * Team Lead: Jack Noble
-  * Team Members: Dave Nestoff, Lucas Wright, Mark McLoughlin
+  * Team Lead: [Jack Noble](https://github.com/winged115)
+  * Team Members: [Dave Nestoff](https://github.com/dnestoff), [Lucas Wright](https://github.com/lucasewright), [Mark McLoughlin](https://github.com/mark-mcl)
