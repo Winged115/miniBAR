@@ -4,6 +4,9 @@
 MiniBAR is a consumer-focused RoR mobile-first web app that allows users to open and manage an active tab from their mobile device. 
 
 ##Features
+
+![Registration](/screenshots/Registration_tabs.png?raw=true)
+
 Users can register as a Patron or Bar (including payment methods). 
 
 As a patron, users can search for bars by zip code and open a tab at a bar. Once a tab has been opened, they can view all items on their open tab, and close their tab (with tip). Bars can add tab items from a pre-determined drink list, toggle status to become discoverable in search rankings, and close a patron's tab (or all existing tabs).
@@ -22,7 +25,9 @@ Ruby version: ````2.2.2````
 To get started, run ````bundle install```` followed by the three following rake setup commands:
 
 ````be rake db:create
+
 be rake db:migrate
+
 be rake db:seed````
 
 ##Using MiniBar
