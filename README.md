@@ -21,11 +21,9 @@ Ruby version: ````2.2.2````
 
 To get started, run ````bundle install```` followed by the three following rake setup commands:
 
-````be rake db:create````
-
-````be rake db:migrate````
-
-````be rake db:seed````
+````be rake db:create
+be rake db:migrate
+be rake db:seed````
 
 ##Using MiniBar
 
