@@ -21,6 +21,7 @@ class Tab < ActiveRecord::Base
     drinks.inject (0) {|sum, drink| sum + drink.price}
   end
 
+  # deprecated this method in favor of #total_owed
   def show_total
     sum = 0
     tab_items.each do |item|
