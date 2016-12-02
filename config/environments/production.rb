@@ -81,5 +81,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.assets.precompile += %w( *.js )
-  config.action_cable.allowed_request_origins = ['https://mini-bar.herokuapp.com', 'http://mini-bar.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://minibar.herokuapp.com', 'http://minibar.herokuapp.com']
 end
