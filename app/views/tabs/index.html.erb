@@ -8,7 +8,7 @@
 
         <%= link_to tab_path(tab), :method => :get, :class => "grid-item" do %>
           <h2><%= tab.patron.full_name %></h2>
-          <h4>$<%= tab.show_total %></h4>
+          <h4>$<%= tab.total_owed %></h4>
         <% end %>
       <% end %>
     </div>

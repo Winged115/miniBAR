@@ -1,7 +1,7 @@
 <%= image_tag("miniBARlogo.png", size: "50%") %>
 
 <span>Tab: 000<%= @tab.id %></span><br>
-<span>Total: </span><span>$</span><span id="total"><%= @tab.show_total %></span>
+<span>Total: </span><span>$</span><span id="total"><%= @tab.total_owed %></span>
 
 <h4>Have a nice night <%= @tab.patron.first_name %>!</h4>
 

@@ -31,7 +31,7 @@ RSpec.describe Tab, type: :model do
     it "can add up the total cost of all drinks on a tab" do
       TabItem.create(tab_id: tab_one.id, drink_id: wine.id)
       TabItem.create(tab_id: tab_one.id, drink_id: beer.id)
-      expect(tab_one.show_total).to eq(22.50)
+      expect(tab_one.total_owed).to eq(22.50)
     end
 
 
