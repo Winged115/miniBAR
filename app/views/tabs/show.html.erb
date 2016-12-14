@@ -3,7 +3,7 @@
 <% elsif session[:patron_id] %>
   <h2><%= @tab.bar.name %></h2>
 <% end %>
-<h3 class="tab-total">Total: $ <%= @tab.show_total %></h3>
+<h3 class="tab-total">Total: $ <%= @tab.total_owed %></h3>
 <br>
 
   <ul class="patron-drink-show">

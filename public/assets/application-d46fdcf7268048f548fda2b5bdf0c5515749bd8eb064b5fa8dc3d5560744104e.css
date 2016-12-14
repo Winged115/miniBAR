@@ -1,0 +1,2342 @@
+@charset "UTF-8";
+/* line 4, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 13, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 27, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 35, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 49, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 62, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 72, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 81, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 92, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 105, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 115, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 125, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 135, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 144, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 154, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 165, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 173, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 182, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 191, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 199, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 203, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 214, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 223, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 232, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 240, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 252, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 268, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 278, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 289, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 300, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 312, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 323, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 336, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 350, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 397, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 407, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 420, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 429, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 440, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 448, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 459, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  appearance: none;
+  background-color: #cf94e0;
+  border: 2px #cf94e0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 22, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #a676b3;
+  color: #fff;
+}
+/* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 32, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_buttons.scss */
+button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+  background-color: #cf94e0;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0;
+}
+
+/* line 14, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input,
+select,
+textarea {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%;
+}
+/* line 40, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover {
+  border-color: #b1b1b1;
+}
+/* line 44, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus {
+  border-color: #cf94e0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(198, 128, 218, 0.7);
+  outline: none;
+}
+/* line 50, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+/* line 54, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
+  border: 1px solid #ddd;
+}
+/* line 59, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+input[type="color"]::placeholder, input[type="date"]::placeholder, input[type="datetime"]::placeholder, input[type="datetime-local"]::placeholder, input[type="email"]::placeholder, input[type="month"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="text"]::placeholder, input[type="time"]::placeholder, input[type="url"]::placeholder, input[type="week"]::placeholder, input:not([type])::placeholder, textarea::placeholder {
+  color: white;
+}
+
+/* line 64, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 68, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 74, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 79, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_forms.scss */
+select {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_layout.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_layout.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* line 11, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_layout.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 16, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_layout.scss */
+.nav-link > a {
+  padding-top: 1%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_lists.scss */
+dl {
+  margin: 0;
+}
+
+/* line 12, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_lists.scss */
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* line 17, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_lists.scss */
+dd {
+  margin: 0;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_media.scss */
+figure {
+  margin: 0;
+}
+
+/* line 5, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_media.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_tables.scss */
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+body {
+  color: #fff;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 2.36859em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 24, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+/* line 29, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #9b6fa8;
+  color: #fff;
+}
+
+/* line 37, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/mixins/_clearfix.scss */
+.grid-items::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item {
+  border-radius: 25px;
+  background: #c4a9cb;
+  border-bottom: 9px solid #fff;
+  border-left: 4.5px solid #fff;
+  border-right: 4.5px solid #fff;
+  border-top: 0;
+  cursor: pointer;
+  float: left;
+  height: 14em;
+  outline: none;
+  overflow: hidden;
+  padding: 2em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  /* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+  .grid-items .grid-item {
+    width: 33.33333%;
+  }
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(1) {
+  background-color: #c4a9cb;
+  box-shadow: inset 0 0 1px 2px #ae89b8;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(1):focus, .grid-items .grid-item:nth-child(1):hover {
+  background-color: #ae89b8;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(2) {
+  background-color: #3581A5;
+  box-shadow: inset 0 0 1px 2px #29637e;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(2):focus, .grid-items .grid-item:nth-child(2):hover {
+  background-color: #29637e;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(3) {
+  background-color: #5FBEBE;
+  box-shadow: inset 0 0 1px 2px #44a6a6;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(3):focus, .grid-items .grid-item:nth-child(3):hover {
+  background-color: #44a6a6;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(4) {
+  background-color: #98C79A;
+  box-shadow: inset 0 0 1px 2px #77b57a;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(4):focus, .grid-items .grid-item:nth-child(4):hover {
+  background-color: #77b57a;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(5) {
+  background-color: #A7A891;
+  box-shadow: inset 0 0 1px 2px #909175;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(5):focus, .grid-items .grid-item:nth-child(5):hover {
+  background-color: #909175;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(6) {
+  background-color: #BDCC97;
+  box-shadow: inset 0 0 1px 2px #a7bb75;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(6):focus, .grid-items .grid-item:nth-child(6):hover {
+  background-color: #a7bb75;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 51, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(7) {
+  background-color: #979EA0;
+  box-shadow: inset 0 0 1px 2px #7c8588;
+}
+/* line 56, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item:nth-child(7):focus, .grid-items .grid-item:nth-child(7):hover {
+  background-color: #7c8588;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 67, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item img {
+  display: block;
+  height: 3em;
+  margin: 0 auto 1em;
+}
+/* line 73, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item h1 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+}
+/* line 79, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5em;
+  margin: auto;
+}
+@media screen and (min-width: 600px) {
+  /* line 79, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+  .grid-items .grid-item p {
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 89, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+  .grid-items .grid-item-big {
+    width: 66.66667%;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 94, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+  .grid-items .grid-item-big p {
+    max-width: 60%;
+  }
+}
+/* line 101, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/show-tabs.scss */
+.grid-items .grid-item-image {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  background-color: #c4a9cb;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables {
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: 3px;
+  border-spacing: 0;
+  width: 100%;
+}
+/* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody {
+  background-color: #fcfcfc;
+}
+/* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody tr:hover > td, .tables tbody tr:hover > th {
+  background-color: #e2e2e2;
+}
+/* line 34, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+/* line 36, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody tr:nth-child(even):hover > td {
+  background-color: #dddddd;
+}
+/* line 43, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables thead:first-of-type tr:first-child > th:first-child {
+  border-top-left-radius: 3px;
+}
+/* line 47, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables thead:first-of-type tr:first-child > th:last-child {
+  border-top-right-radius: 3px;
+}
+/* line 53, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody:last-child tr:last-child > td:first-child {
+  border-bottom-left-radius: 3px;
+}
+/* line 57, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody:last-child tr:last-child > td:last-child {
+  border-bottom-right-radius: 3px;
+}
+/* line 63, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables thead th {
+  background-color: white;
+  border-bottom: 0;
+  border-left: 1px solid #ddd;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+/* line 70, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables thead th:first-child {
+  border-left: 0;
+}
+/* line 76, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody {
+  background-color: #fcfcfc;
+}
+/* line 79, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody td {
+  border-bottom: 0;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 0.75em 1em;
+}
+/* line 85, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody td:first-child {
+  border-left: 0;
+}
+/* line 89, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables tbody td button {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1.5;
+  margin-bottom: 0.3em;
+  margin-right: 0.5em;
+  outline: none;
+  padding: 0.3em 1em;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  /* line 89, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+  .tables tbody td button {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+/* line 106, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drinks-list.scss */
+.tables .add-item-forms {
+  width: 50%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation {
+  background-color: #000000;
+  border-bottom: 1px solid #d4e6dd;
+  min-height: 60px;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 26, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .mobile-logo {
+  display: inline;
+  float: left;
+  max-height: 60px;
+  padding-left: 1em;
+}
+/* line 32, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .mobile-logo img {
+  max-height: 60px;
+  opacity: 0.6;
+  padding: 0.8em 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 26, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation .mobile-logo {
+    display: none;
+  }
+}
+/* line 43, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .centered-navigation-mobile-menu {
+  color: #cf94e0;
+  display: block;
+  float: right;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 900px) {
+  /* line 43, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation .centered-navigation-mobile-menu {
+    display: none;
+  }
+}
+/* line 57, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .centered-navigation-mobile-menu:focus, .centered-navigation .centered-navigation-mobile-menu:hover {
+  color: #cf94e0;
+}
+/* line 65, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .centered-navigation-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 999;
+}
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/mixins/_clearfix.scss */
+.centered-navigation .centered-navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/mixins/_clearfix.scss */
+.centered-navigation .centered-navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 72, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul.centered-navigation-menu {
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+  width: 100%;
+  z-index: 99999;
+}
+/* line 82, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul.centered-navigation-menu.show {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  /* line 72, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.centered-navigation-menu {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 94, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation .nav-link:first-child {
+    margin-left: 2.2em;
+  }
+}
+/* line 100, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul li.nav-link {
+  background: #E7F1EC;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 1em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 110, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul li.nav-link a {
+  color: #b2afb3;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+}
+/* line 116, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul li.nav-link a:focus, .centered-navigation ul li.nav-link a:hover {
+  color: #cf94e0;
+}
+@media screen and (min-width: 900px) {
+  /* line 100, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+  }
+  /* line 127, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 133, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.logo.nav-link {
+  display: none;
+  line-height: 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 133, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation li.logo.nav-link {
+    display: inline;
+  }
+}
+/* line 142, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation .logo img {
+  margin-bottom: -0.66667em;
+  max-height: 2em;
+  opacity: 0.6;
+}
+/* line 150, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 150, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation li.more.nav-link {
+    padding-right: 1em;
+  }
+}
+/* line 157, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 161, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more.nav-link a {
+  margin-right: 1em;
+}
+/* line 165, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 169, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more.nav-link > a::after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  color: rgba(255, 255, 255, 0.7);
+  content: "\25BE";
+}
+/* line 176, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 180, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more a {
+  padding-right: 1em;
+}
+/* line 184, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  /* line 184, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation li.more > a {
+    margin-right: 1em;
+  }
+}
+/* line 192, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more > a::after {
+  content: "›";
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.5em;
+}
+/* line 200, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation li.more:focus > .submenu, .centered-navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  /* line 176, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation li.more {
+    padding-right: 1em;
+    position: relative;
+  }
+}
+/* line 211, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 211, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu {
+    left: -1em;
+    position: absolute;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 221, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu .submenu.fly-out-right {
+    left: 11.8em;
+    top: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 228, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu .submenu.fly-out-left {
+    left: -11.8em;
+    top: 0;
+  }
+}
+/* line 235, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 235, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu li {
+    line-height: 46.15385px;
+  }
+  /* line 242, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* line 247, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-bottom: 0.7em;
+  }
+}
+/* line 254, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+.centered-navigation ul.submenu li a {
+  background-color: #86b9a0;
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  /* line 254, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/nav-bar.scss */
+  .centered-navigation ul.submenu li a {
+    background-color: #E7F1EC;
+    padding-left: 1em;
+    text-align: left;
+    width: 12em;
+  }
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander {
+  width: 60%;
+}
+/* line 16, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander .expander-trigger {
+  border-bottom: 1px solid #ddd;
+  color: #cf94e0;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+  user-select: none;
+}
+/* line 27, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander .expander-trigger::before {
+  content: "\25BC";
+  font-size: 0.7em;
+  margin-right: 0.5em;
+}
+/* line 34, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander .expander-content p {
+  color: #fff;
+  line-height: 1.5;
+}
+/* line 40, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander .expander-hidden::before {
+  content: "\25BA";
+  font-size: 0.7em;
+}
+/* line 46, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/bar-list.scss */
+.expander .expander-hidden + .expander-content {
+  display: none;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+/* line 25, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal label img {
+  border-radius: 150px;
+  display: block;
+  max-width: 300px;
+}
+/* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-state {
+  display: none;
+}
+/* line 35, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-trigger {
+  padding: 0.8em 1em;
+}
+/* line 39, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  padding-top: 0.6em;
+  text-align: left;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999999999;
+}
+@media screen and (min-width: 900px) {
+  /* line 39, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+  .modal .modal-fade-screen {
+    padding-top: 10em;
+  }
+}
+/* line 53, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-fade-screen .modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+/* line 59, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  background: #fff;
+  cursor: pointer;
+}
+/* line 65, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-close::after, .modal .modal-close::before {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 0;
+  left: 50%;
+  height: 1.5em;
+  width: 0.15em;
+  background: #ddd;
+  content: "";
+  display: block;
+  margin: -3px 0 0 -1px;
+  transform: rotate(45deg);
+}
+/* line 76, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-close:hover::after, .modal .modal-close:hover::before {
+  background: #c4c4c4;
+}
+/* line 81, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-close::before {
+  transform: rotate(-45deg);
+}
+/* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner {
+  background: #fff;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 0;
+  max-height: 95%;
+  overflow: auto;
+  padding: 1.5em;
+  position: relative;
+  transition: opacity 0.25s ease;
+  width: 95%;
+}
+@media screen and (min-width: 600px) {
+  /* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+  .modal .modal-inner {
+    max-height: 70%;
+    padding: 3em;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+  .modal .modal-inner {
+    width: 50%;
+  }
+}
+/* line 108, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner h1 {
+  color: #fff;
+  text-align: left;
+  text-transform: capitalize;
+}
+/* line 114, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner p {
+  color: #fff;
+  line-height: 1.5;
+}
+/* line 119, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner .modal-intro {
+  margin-bottom: 1em;
+}
+/* line 123, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner .modal-content {
+  color: #fff;
+}
+@media screen and (min-width: 600px) {
+  /* line 123, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+  .modal .modal-inner .modal-content {
+    columns: 2 8em;
+  }
+}
+/* line 131, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner a.cta {
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+/* line 137, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-inner a.cta:last-child {
+  padding: 0 2em;
+}
+/* line 143, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 148, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen .modal-inner {
+  top: 0.5em;
+}
+
+/* line 153, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/close_tab_modal.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group input {
+  display: none;
+}
+/* line 24, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 900px) {
+  /* line 24, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+  .button-group label {
+    float: left;
+  }
+}
+/* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label .button-group-item {
+  background: #fff;
+  border-left: 1px solid silver;
+  border-radius: 0;
+  border-right: 1px solid silver;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0.75em 1em;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  /* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+  .button-group label .button-group-item {
+    border-bottom: 1px solid silver;
+    border-left: 0;
+    border-right: 1px solid #eeeeee;
+    border-top: 1px solid silver;
+    width: auto;
+  }
+}
+/* line 53, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label .button-group-item:focus, .button-group label .button-group-item:hover {
+  background-color: #f7f7f7;
+}
+/* line 59, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label:first-child .button-group-item {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top: 1px solid silver;
+}
+@media screen and (min-width: 900px) {
+  /* line 59, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+  .button-group label:first-child .button-group-item {
+    border-bottom-left-radius: 3px;
+    border-left: 1px solid silver;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 0;
+  }
+}
+/* line 71, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label:last-child .button-group-item {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom: 1px solid silver;
+}
+@media screen and (min-width: 900px) {
+  /* line 71, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+  .button-group label:last-child .button-group-item {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-right: 1px solid silver;
+    border-top-right-radius: 3px;
+  }
+}
+/* line 83, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/tip_buttons.scss */
+.button-group label input:checked + .button-group-item {
+  background: #cf94e0;
+  border: 1px solid #b459cf;
+  box-shadow: inset 0 1px 2px #bd6cd5;
+  color: white;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+/* line 25, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal label img {
+  border-radius: 150px;
+  display: block;
+  max-width: 300px;
+}
+/* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-state {
+  display: none;
+}
+/* line 35, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-trigger {
+  padding: 0.8em 1em;
+}
+/* line 39, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  padding-top: 0.6em;
+  text-align: left;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999999999;
+}
+@media screen and (min-width: 900px) {
+  /* line 39, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+  .modal .modal-fade-screen {
+    padding-top: 10em;
+  }
+}
+/* line 53, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-fade-screen .modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+/* line 59, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  background: #45494D;
+  cursor: pointer;
+}
+/* line 65, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-close::after, .modal .modal-close::before {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 0;
+  left: 50%;
+  height: 1.5em;
+  width: 0.15em;
+  background: #ddd;
+  content: "";
+  display: block;
+  margin: -3px 0 0 -1px;
+  transform: rotate(45deg);
+}
+/* line 76, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-close:hover::after, .modal .modal-close:hover::before {
+  background: #c4c4c4;
+}
+/* line 81, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-close::before {
+  transform: rotate(-45deg);
+}
+/* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner {
+  background: #45494D;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 0;
+  max-height: 95%;
+  overflow: auto;
+  padding: 1.5em;
+  position: relative;
+  transition: opacity 0.25s ease;
+  width: 95%;
+}
+@media screen and (min-width: 600px) {
+  /* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+  .modal .modal-inner {
+    max-height: 70%;
+    padding: 3em;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 86, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+  .modal .modal-inner {
+    width: 50%;
+  }
+}
+/* line 108, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner h1 {
+  color: #fff;
+  text-align: left;
+  text-transform: capitalize;
+}
+/* line 114, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner p {
+  color: #fff;
+  line-height: 1.5;
+}
+/* line 119, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner .modal-intro {
+  margin-bottom: 1em;
+}
+/* line 123, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner .modal-content {
+  color: #fff;
+}
+@media screen and (min-width: 600px) {
+  /* line 123, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+  .modal .modal-inner .modal-content {
+    columns: 2 8em;
+  }
+}
+/* line 131, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner a.cta {
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+/* line 137, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-inner a.cta:last-child {
+  padding: 0 2em;
+}
+/* line 143, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 148, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen .modal-inner {
+  top: 0.5em;
+}
+
+/* line 153, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/drink_modal.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/0-plugins/neat/mixins/_clearfix.scss */
+.accordion-tabs::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media screen and (max-width: 270px) {
+  /* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+}
+@media screen and (min-width: 270px) {
+  /* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs body {
+    background: purple;
+  }
+}
+/* line 33, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-header-and-content {
+  list-style: none;
+}
+@media screen and (min-width: 270px) {
+  /* line 33, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-header-and-content {
+    display: inline;
+  }
+}
+/* line 40, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-header-and-content:first-child .tab-link {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+@media screen and (max-width: 270px) {
+  /* line 40, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-header-and-content:first-child .tab-link {
+    border-top: 0;
+  }
+}
+@media screen and (max-width: 270px) {
+  /* line 49, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-header-and-content:last-child .tab-link {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+/* line 57, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-link {
+  font-size: 1em;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  color: #333;
+  display: block;
+  font-weight: thin;
+  padding: 0.75em 0.809em;
+  text-decoration: none;
+  width: 48%;
+  min-width: 15%;
+}
+@media screen and (min-width: 270px) {
+  /* line 57, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-link {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 0;
+    display: inline-block;
+  }
+}
+/* line 75, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-link:hover {
+  color: #cf94e0;
+}
+/* line 79, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-link:focus {
+  outline: none;
+}
+/* line 83, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-link.is-active {
+  background-color: #f7f7f7;
+}
+@media screen and (min-width: 270px) {
+  /* line 83, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-link.is-active {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-bottom-color: #f7f7f7;
+    margin-bottom: -1px;
+  }
+}
+/* line 95, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+.accordion-tabs .tab-content {
+  background: #f7f7f7;
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+}
+@media screen and (min-width: 270px) {
+  /* line 95, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/patron_bar_switch.scss */
+  .accordion-tabs .tab-content {
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    float: left;
+  }
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+body {
+  background: url(background-black.jpg);
+  background: url(alt2-background-shaded.jpg);
+  background-color: black;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.drunk {
+  margin: 0 auto;
+  width: 400px;
+  font-size: 36px;
+  text-align: center;
+  font-family: 'Lato', Arial, sans-serif;
+  color: whiteSmoke;
+}
+
+/* line 17, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#container {
+  height: 370px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: -20px;
+  width: 248px;
+}
+
+/* line 26, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#container div {
+  position: absolute;
+}
+
+/* line 28, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.pour {
+  position: absolute;
+  margin-top: 27px;
+  left: 45%;
+  width: 20px;
+  height: 0px;
+  background-color: #edaf32;
+  border-radius: 10px;
+}
+
+/* line 38, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#beaker {
+  border: 10px solid #FFF;
+  border-top: 0;
+  border-radius: 0 0 30px 30px;
+  height: 200px;
+  left: 20px;
+  bottom: 0;
+  width: 200px;
+}
+
+/* line 48, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#beaker:before,
+#beaker:after {
+  border: 10px solid #FFF;
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  content: '';
+  height: 30px;
+  position: absolute;
+  top: -30px;
+  width: 30px;
+}
+
+/* line 60, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#beaker:before {
+  left: -30px;
+}
+
+/* line 61, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#beaker:after {
+  right: -30px;
+}
+
+/* line 63, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#liquid {
+  background-color: #edaf32;
+  border: 10px solid #edaf32;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  height: 0px;
+  overflow: hidden;
+  width: 180px;
+}
+
+/* line 73, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#liquid:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 200px;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 110px;
+}
+
+/* line 85, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+#liquid .bubble {
+  -webkit-animation-name: bubble;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 80px;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 160px;
+  }
+}
+/* line 110, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.bubble1 {
+  left: 10px;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+/* line 116, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.bubble2 {
+  left: 50px;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+/* line 122, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.bubble3 {
+  left: 100px;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+/* line 128, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.bubble4 {
+  left: 130px;
+  -webkit-animation-delay: 1100ms;
+  -webkit-animation-duration: 700ms;
+}
+
+/* line 134, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.bubble5 {
+  left: 170px;
+  -webkit-animation-delay: 1300ms;
+  -webkit-animation-duration: 800ms;
+}
+
+/* Foam */
+/* line 142, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.beer-foam {
+  position: absolute;
+  bottom: 10px;
+}
+
+/* line 147, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-1, .foam-2, .foam-3, .foam-4,
+.foam-5, .foam-6, .foam-7 {
+  float: left;
+  position: absolute;
+  z-index: 999;
+  width: 40px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #fefefe;
+}
+
+/* line 157, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-1 {
+  top: -30px;
+  left: -10px;
+}
+
+/* line 161, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-2 {
+  top: -35px;
+  left: 10px;
+}
+
+/* line 165, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-3 {
+  top: -25px;
+  left: 40px;
+}
+
+/* line 169, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-4 {
+  top: -35px;
+  left: 70px;
+}
+
+/* line 173, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-5 {
+  top: -30px;
+  left: 100px;
+}
+
+/* line 177, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-6 {
+  top: -20px;
+  left: 130px;
+}
+
+/* line 181, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.foam-7 {
+  top: -30px;
+  left: 150px;
+}
+
+/* Drunk Text */
+/* line 188, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+/* line 203, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.animated.drunk {
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes drunk {
+  0% {
+    -webkit-transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    -webkit-transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  40% {
+    -webkit-transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes drunk {
+  0% {
+    -moz-transform: rotate(0);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    -moz-transform: rotate(80deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  40% {
+    -moz-transform: rotate(60deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  80% {
+    -moz-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  100% {
+    -moz-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+@keyframes drunk {
+  0% {
+    transform: rotate(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+/* line 301, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/2-modules/welcome.scss */
+.drunk {
+  -webkit-animation-name: drunk;
+  -moz-animation-name: drunk;
+  animation-name: drunk;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/tabs_index.sass */
+#settings-button {
+  background-color: black;
+  padding: 3%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+}
+
+/* line 13, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/tabs_index.sass */
+#tabs-container {
+  width: 80%;
+  margin: auto;
+}
+
+/* line 17, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/tabs_index.sass */
+.tab-buttons {
+  margin-top: 5%;
+  margin-bottom: 18%;
+}
+
+/* line 21, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/tabs_index.sass */
+.grid-item {
+  width: 30%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/map.sass */
+#map {
+  height: 30%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/reg_home.sass */
+h2 {
+  text-align: center;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+h1 {
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+  max-width: 80%;
+  margin-bottom: 5%;
+}
+
+/* line 8, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.refresh-search-button {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
+
+/* line 13, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+#bar-search-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+/* line 20, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.expander {
+  padding: 3%;
+  margin-left: 5%;
+}
+
+/* line 24, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.expander > a {
+  font-size: 7em;
+}
+
+/* line 27, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.expander-content {
+  padding: 4%;
+  border: 1px solid white;
+}
+
+/* line 31, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.open-tab-form {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* line 35, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/bars_index.sass */
+.open-tab-form > p {
+  padding: 5%;
+  font-size: 1.25em;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/tip_buttons.sass */
+.button-group {
+  padding-top: 2%;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+.page-headline {
+  border: 3px solid #fff;
+  margin: auto;
+  margin-top: 3%;
+  height: 8%;
+  width: 40%;
+  text-align: left;
+  padding: 3%;
+  color: #fff;
+}
+
+/* line 11, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+#close-tabs-container {
+  margin: auto;
+  width: 30%;
+  text-align: center;
+  padding: 5% 2% 3% 2%;
+  border-top: 1px solid #fff;
+}
+
+/* line 18, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+#close-tabs-container > p {
+  margin: auto;
+  margin-bottom: 5%;
+  font-size: 0.9em;
+  max-width: 275px;
+}
+
+/* line 24, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+#discoverable-container {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 5%;
+}
+
+/* line 30, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+#discoverable-container > p {
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  max-width: 375px;
+}
+
+/* line 37, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/settings.sass */
+#open-tabs-link {
+  padding-top: 10%;
+  font-size: 0.9em;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 1, /Users/davenestoff/Desktop/miniBAR/app/assets/stylesheets/css/3-layouts/drinks_index.sass */
+.tables > tr, th, td {
+  color: #45494D;
+}
